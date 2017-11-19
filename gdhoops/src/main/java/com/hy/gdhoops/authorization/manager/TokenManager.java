@@ -5,8 +5,6 @@ import com.hy.gdhoops.model.TokenModel;
 
 /**
  * 对Token进行操作的接口
- * @author ScienJus
- * @date 2015/7/31.
  */
 public interface TokenManager {
 

@@ -39,7 +39,7 @@ public abstract class BaseController {
             limit = "12";
         }
 
-        getRequsetUri();
+//        getRequsetUri();
     }
 
     protected Map<String, String> getRequestMap() {

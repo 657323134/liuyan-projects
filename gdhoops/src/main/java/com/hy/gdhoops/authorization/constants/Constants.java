@@ -2,8 +2,6 @@ package com.hy.gdhoops.authorization.constants;
 
 /**
  * 常量
- * @author ScienJus
- * @date 2015/7/31.
  */
 public class Constants {
 

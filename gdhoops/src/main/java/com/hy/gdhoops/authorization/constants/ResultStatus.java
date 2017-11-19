@@ -2,8 +2,6 @@ package com.hy.gdhoops.authorization.constants;
 
 /**
  * 自定义请求状态码
- * @author ScienJus
- * @date 2015/7/15.
  */
 public enum ResultStatus {
     SUCCESS(100, "成功"),
