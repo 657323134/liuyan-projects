@@ -8,6 +8,7 @@ xicar.iml
 .idea/artifacts/
 .idea/copyright/profiles_settings.xml
 .idea/libraries/
+gdhoops.iml
 # Log file
 *.log
 out
