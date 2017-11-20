@@ -42,9 +42,8 @@ public class CurrentUserMethodArgumentResolver implements HandlerMethodArgumentR
         if (currentUserId != null) {
             //从数据库中查询并返回
             User user = new User();
-//            user.setId(currentUserId);
+            user.setId(Integer.parseInt(currentUserId.toString()));
             return userMapper.selectOne(user);
-//            return userRepository.findOne(currentUserId);
         }
         throw new MissingServletRequestPartException(Constants.CURRENT_USER_ID);
     }

@@ -1,5 +1,7 @@
 package com.hy.gdhoops.web;
 
+import com.hy.gdhoops.authorization.annotation.Authorization;
+import com.hy.gdhoops.authorization.annotation.CurrentUser;
 import com.hy.gdhoops.core.Result;
 import com.hy.gdhoops.core.ResultGenerator;
 import com.hy.gdhoops.model.User;
@@ -38,9 +40,11 @@ public class UserController {
         return ResultGenerator.genSuccessResult();
     }
 
-    @GetMapping("/{id}")
-    public Result detail(@PathVariable Integer id) {
-        User user = userService.findById(id);
+    @GetMapping("/detail")
+    @Authorization
+    public Result detail(@CurrentUser User user) {
+//        System.out.println(user);
+//        user = userService.findById(user.getId());
         return ResultGenerator.genSuccessResult(user);
     }
 

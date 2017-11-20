@@ -5,7 +5,6 @@ import com.hy.gdhoops.authorization.annotation.Authorization;
 import com.hy.gdhoops.authorization.annotation.CurrentUser;
 import com.hy.gdhoops.authorization.constants.ResultStatus;
 import com.hy.gdhoops.authorization.manager.TokenManager;
-import com.hy.gdhoops.dao.UserMapper;
 import com.hy.gdhoops.model.ResultModel;
 import com.hy.gdhoops.model.TokenModel;
 import com.hy.gdhoops.model.User;
@@ -45,8 +44,8 @@ public class TokenController {
         Assert.notNull(username, "username can not be empty");
         Assert.notNull(password, "password can not be empty");
 
-//        User user = userService.findBy("username",username);
-        User user = userService.findById(1);
+        User user = userService.findBy("username",username);
+//        User user = userService.findById(1);
 //        User user = userMapper.findByUsername(username);
         if (user == null ||  //未注册
                 !user.getPassword().equals(password)) {  //密码错误

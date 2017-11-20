@@ -1,5 +1,7 @@
 package com.hy.gdhoops.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 
 @Table(name = "users")
@@ -10,6 +12,7 @@ public class User {
 
     private String username;
 
+    @JsonIgnore
     private String password;
 
     private String nickname;
