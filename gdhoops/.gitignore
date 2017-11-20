@@ -1,0 +1,37 @@
+xicar.iml
+.idea/compiler.xml
+.idea/workspace.xml
+.idea/findbugs-idea.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/workspace.xml
+.idea/artifacts/
+.idea/copyright/profiles_settings.xml
+.idea/libraries/
+# Log file
+*.log
+out
+target
+.idea
+
+
+# Compiled class file
+*.class
+
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
