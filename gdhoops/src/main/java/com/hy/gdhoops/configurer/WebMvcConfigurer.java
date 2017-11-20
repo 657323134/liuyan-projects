@@ -2,22 +2,16 @@ package com.hy.gdhoops.configurer;
 
 
 import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.serializer.SerializerFeature;
-import com.alibaba.fastjson.support.config.FastJsonConfig;
-import com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter4;
 import com.hy.gdhoops.authorization.interceptor.AuthorizationInterceptor;
 import com.hy.gdhoops.core.CurrentUserMethodArgumentResolver;
 import com.hy.gdhoops.core.Result;
 import com.hy.gdhoops.core.ResultCode;
 import com.hy.gdhoops.core.ServiceException;
-import org.apache.commons.codec.digest.DigestUtils;
-import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.method.support.HandlerMethodArgumentResolver;
 import org.springframework.web.servlet.HandlerExceptionResolver;
@@ -27,15 +21,10 @@ import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
-import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
-
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.nio.charset.Charset;
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 /**
@@ -48,16 +37,16 @@ public class WebMvcConfigurer extends WebMvcConfigurerAdapter {
     @Value("${spring.profiles.active}")
     private String env;//当前激活的配置文件
 
-    @Override
-    public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/**").addResourceLocations("classpath:/static/");
-    }
-
     @Autowired
     private AuthorizationInterceptor authorizationInterceptor;
 
     @Autowired
     private CurrentUserMethodArgumentResolver currentUserMethodArgumentResolver;
+
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        registry.addResourceHandler("/**").addResourceLocations("classpath:/static/");
+    }
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
@@ -161,12 +150,12 @@ public class WebMvcConfigurer extends WebMvcConfigurerAdapter {
         }
     }
 
-    /**
+/*    *//**
      * 一个简单的签名认证，规则：
      * 1. 将请求参数按ascii码排序
      * 2. 拼接为a=value&b=value...这样的字符串（不包含sign）
      * 3. 混合密钥（secret）进行md5获得签名，与请求的签名进行比较
-     */
+     *//*
     private boolean validateSign(HttpServletRequest request) {
         String requestSign = request.getParameter("sign");//获得请求签名，如sign=19e907700db7ad91318424a97c54ed57
         if (StringUtils.isEmpty(requestSign)) {
@@ -187,7 +176,7 @@ public class WebMvcConfigurer extends WebMvcConfigurerAdapter {
         String sign = DigestUtils.md5Hex(linkString + secret);//混合密钥md5
 
         return StringUtils.equals(sign, requestSign);//比较
-    }
+    }*/
 
     private String getIpAddress(HttpServletRequest request) {
         String ip = request.getHeader("x-forwarded-for");

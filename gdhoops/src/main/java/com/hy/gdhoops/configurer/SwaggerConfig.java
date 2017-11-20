@@ -12,8 +12,6 @@ import java.sql.Timestamp;
 
 /**
  * swagger-ui的配置
- * @author ScienJus
- * @date 2015/7/10.
  */
 @Configuration
 @EnableSwagger
