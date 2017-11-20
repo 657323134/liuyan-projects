@@ -8,6 +8,7 @@ import com.hy.gdhoops.authorization.manager.TokenManager;
 import com.hy.gdhoops.model.ResultModel;
 import com.hy.gdhoops.model.TokenModel;
 import com.hy.gdhoops.model.User;
+import com.hy.gdhoops.security.MD5;
 import com.hy.gdhoops.service.UserService;
 import com.wordnik.swagger.annotations.ApiImplicitParam;
 import com.wordnik.swagger.annotations.ApiImplicitParams;
@@ -25,8 +26,6 @@ import javax.annotation.Resource;
 
 /**
  * 获取和删除token的请求地址，在Restful设计中其实就对应着登录和退出登录的资源映射
- * @author ScienJus
- * @date 2015/7/30.
  */
 @RestController
 @RequestMapping("/tokens")
@@ -45,10 +44,9 @@ public class TokenController {
         Assert.notNull(password, "password can not be empty");
 
         User user = userService.findBy("username",username);
-//        User user = userService.findById(1);
-//        User user = userMapper.findByUsername(username);
+        String s = MD5.encrypt(password);
         if (user == null ||  //未注册
-                !user.getPassword().equals(password)) {  //密码错误
+                !user.getPassword().equals(MD5.encrypt(password))) {  //密码错误
             //提示用户名或密码错误
             return new ResponseEntity<>(ResultModel.error(ResultStatus.USERNAME_OR_PASSWORD_ERROR), HttpStatus.NOT_FOUND);
         }

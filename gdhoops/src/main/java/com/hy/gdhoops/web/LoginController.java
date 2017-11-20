@@ -1,6 +1,8 @@
 package com.hy.gdhoops.web;
 
+import com.hy.gdhoops.constans.SysConstans;
 import com.hy.gdhoops.properties.Weixin;
+import com.hy.gdhoops.security.MD5;
 import com.hy.gdhoops.weixin.WeiXinService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -25,7 +27,8 @@ public class LoginController extends BaseController{
     public ModelAndView toLogin() {
         String appid = weixin.getApp_secrect();
 
-        System.out.println(appid);
+        String encrypt = MD5.encrypt("liuyan");
+        System.out.println(encrypt);
         return new ModelAndView("toLogin");
     }
     
