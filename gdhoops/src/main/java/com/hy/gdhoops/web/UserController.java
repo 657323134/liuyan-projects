@@ -12,7 +12,7 @@ import javax.annotation.Resource;
 import java.util.List;
 
 /**
-* Created by CodeGenerator on 2017/11/17.
+* Created by CodeGenerator on 2017/11/20.
 */
 @RestController
 @RequestMapping("/user")

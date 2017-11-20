@@ -4,7 +4,7 @@ import com.hy.gdhoops.core.Service;
 
 
 /**
- * Created by CodeGenerator on 2017/11/17.
+ * Created by CodeGenerator on 2017/11/20.
  */
 public interface UserService extends Service<User> {
 

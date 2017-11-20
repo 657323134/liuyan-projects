@@ -5,9 +5,13 @@
     <!--
       WARNING - @mbg.generated
     -->
-    <id column="id" jdbcType="BIGINT" property="id" />
+    <id column="id" jdbcType="INTEGER" property="id" />
     <result column="username" jdbcType="VARCHAR" property="username" />
     <result column="password" jdbcType="VARCHAR" property="password" />
     <result column="nickname" jdbcType="VARCHAR" property="nickname" />
   </resultMap>
+
+  <select id="queryById" resultMap="BaseResultMap">
+    select * from users where id=#{id}
+  </select>
 </mapper>

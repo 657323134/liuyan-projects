@@ -27,6 +27,7 @@ public class LoginController extends BaseController{
         System.out.println(appid);
         return new ModelAndView("toLogin");
     }
+    
 
     @RequestMapping("weixinLogin")
     public String weixinLogin() {

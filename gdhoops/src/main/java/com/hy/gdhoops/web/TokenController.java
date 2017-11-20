@@ -9,6 +9,7 @@ import com.hy.gdhoops.dao.UserMapper;
 import com.hy.gdhoops.model.ResultModel;
 import com.hy.gdhoops.model.TokenModel;
 import com.hy.gdhoops.model.User;
+import com.hy.gdhoops.service.UserService;
 import com.wordnik.swagger.annotations.ApiImplicitParam;
 import com.wordnik.swagger.annotations.ApiImplicitParams;
 import com.wordnik.swagger.annotations.ApiOperation;
@@ -33,7 +34,7 @@ import javax.annotation.Resource;
 public class TokenController {
 
     @Resource
-    private UserMapper userMapper;
+    private UserService userService;
 
     @Autowired
     private TokenManager tokenManager;
@@ -44,9 +45,8 @@ public class TokenController {
         Assert.notNull(username, "username can not be empty");
         Assert.notNull(password, "password can not be empty");
 
-        User user = new User();
-        user.setUsername(username);
-        user = userMapper.selectOne(user);
+//        User user = userService.findBy("username",username);
+        User user = userService.findById(1);
 //        User user = userMapper.findByUsername(username);
         if (user == null ||  //未注册
                 !user.getPassword().equals(password)) {  //密码错误
