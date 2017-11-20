@@ -3,9 +3,10 @@ package com.hy.gdhoops.web;
 
 import com.hy.gdhoops.authorization.annotation.Authorization;
 import com.hy.gdhoops.authorization.annotation.CurrentUser;
-import com.hy.gdhoops.authorization.constants.ResultStatus;
 import com.hy.gdhoops.authorization.manager.TokenManager;
-import com.hy.gdhoops.model.ResultModel;
+import com.hy.gdhoops.core.Result;
+import com.hy.gdhoops.core.ResultCode;
+import com.hy.gdhoops.core.ResultGenerator;
 import com.hy.gdhoops.model.TokenModel;
 import com.hy.gdhoops.model.User;
 import com.hy.gdhoops.security.MD5;
@@ -14,14 +15,11 @@ import com.wordnik.swagger.annotations.ApiImplicitParam;
 import com.wordnik.swagger.annotations.ApiImplicitParams;
 import com.wordnik.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.util.Assert;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
 import javax.annotation.Resource;
 
 /**
@@ -39,7 +37,7 @@ public class TokenController {
 
     @RequestMapping(method = RequestMethod.POST)
     @ApiOperation(value = "登录")
-    public ResponseEntity<ResultModel> login(@RequestParam String username, @RequestParam String password) {
+    public Result login(@RequestParam String username, @RequestParam String password) {
         Assert.notNull(username, "username can not be empty");
         Assert.notNull(password, "password can not be empty");
 
@@ -48,11 +46,11 @@ public class TokenController {
         if (user == null ||  //未注册
                 !user.getPassword().equals(MD5.encrypt(password))) {  //密码错误
             //提示用户名或密码错误
-            return new ResponseEntity<>(ResultModel.error(ResultStatus.USERNAME_OR_PASSWORD_ERROR), HttpStatus.NOT_FOUND);
+            return new Result().setCode(ResultCode.UNAUTHORIZED).setMessage("用户名或密码错误");
         }
         //生成一个token，保存用户登录状态
         TokenModel model = tokenManager.createToken(user.getId());
-        return new ResponseEntity<>(ResultModel.ok(model), HttpStatus.OK);
+        return ResultGenerator.genSuccessResult(model);
     }
 
     @RequestMapping(method = RequestMethod.DELETE)
@@ -61,9 +59,9 @@ public class TokenController {
     @ApiImplicitParams({
             @ApiImplicitParam(name = "authorization", value = "authorization", required = true, dataType = "string", paramType = "header"),
     })
-    public ResponseEntity<ResultModel> logout(@CurrentUser User user) {
+    public Result logout(@CurrentUser User user) {
         tokenManager.deleteToken(user.getId());
-        return new ResponseEntity<>(ResultModel.ok(), HttpStatus.OK);
+        return ResultGenerator.genSuccessResult();
     }
 
 }

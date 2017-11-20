@@ -1,9 +1,5 @@
 package com.hy.gdhoops.constans;
 
-import org.springframework.core.io.support.PropertiesLoaderUtils;
-
-import java.io.IOException;
-import java.util.Properties;
 
 /**
  * 系统常量
