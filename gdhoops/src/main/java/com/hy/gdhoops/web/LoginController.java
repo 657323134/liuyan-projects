@@ -17,9 +17,7 @@ import org.springframework.web.servlet.ModelAndView;
  */
 @Controller
 @RequestMapping("/login")
-public class LoginController extends BaseController{
-    @Autowired
-    private WeiXinService weiXinService;
+public class LoginController{
     @Autowired
     private Weixin weixin;
 

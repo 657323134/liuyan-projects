@@ -8,6 +8,9 @@ import com.hy.gdhoops.model.User;
 import com.hy.gdhoops.service.UserService;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import com.wordnik.swagger.annotations.ApiImplicitParam;
+import com.wordnik.swagger.annotations.ApiImplicitParams;
+import com.wordnik.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -28,11 +31,11 @@ public class UserController {
         return ResultGenerator.genSuccessResult();
     }
 
-    @DeleteMapping("/{id}")
-    public Result delete(@PathVariable Integer id) {
-        userService.deleteById(id);
-        return ResultGenerator.genSuccessResult();
-    }
+//    @DeleteMapping("/{id}")
+//    public Result delete(@PathVariable Integer id) {
+//        userService.deleteById(id);
+//        return ResultGenerator.genSuccessResult();
+//    }
 
     @PutMapping
     public Result update(@RequestBody User user) {
@@ -42,6 +45,10 @@ public class UserController {
 
     @GetMapping("/detail")
     @Authorization
+    @ApiOperation(value = "用户信息详情")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "authorization", value = "authorization", required = true, dataType = "string", paramType = "header"),
+    })
     public Result detail(@CurrentUser User user) {
         return ResultGenerator.genSuccessResult(user);
     }
