@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <title>优卡分期</title>
+    <link rel="stylesheet" href="../../../css/businesses/weui.min.css">
+    <link rel="stylesheet" href="../../../js/plugins/swiper/swiper.min.css">
+    <link rel="stylesheet" href="../../../css/front/common.css">
+    <link rel="stylesheet" href="../../../css/front/commodityShare.css">
+
+</head>
+
+<body class="share">
+<!--隐藏ID-->
+<div id="hiddenValues">
+    <script type="text/template" id="hiddenTpl">
+        <input type="hidden" id="openid" value="{{data.openid}}"/>
+        <input type="hidden" id="goodsid" value="{{data.tGoods.id}}"/>
+        <input type="hidden" id="shareuserid" value="{{data.shareuserid}}"/>
+        <input type="hidden" id="bUserId" value="{{data.buserid}}"/>
+
+        <input type="hidden" id="appid" value="{{data.appid}}"/>
+        <input type="hidden" id="timestamp" value="{{data.timestamp}}"/>
+        <input type="hidden" id="nonceStr" value="{{data.nonceStr}}"/>
+        <input type="hidden" id="signature" value="{{data.signature}}"/>
+        <input type="hidden" id="title" value="{{data.title}}"/>
+        <input type="hidden" id="description" value="{{data.description}}"/>
+        <input type="hidden" id="shareUrl" value="{{data.shareUrl}}"/>
+        <input type="hidden" id="imgUrl" value="{{data.imgUrl}}"/>
+
+    </script>
+</div>
+
+<!-- 弹框 -->
+<div class="pop-up" id="popWindows">
+    <script type="text/template" id="popTpl">
+    <!-- 领取红包 -->
+    {{if data.bActivitySharing !=null}}
+    <div class="pop-up-box receive-red">
+        <span class="close-btn"></span>
+
+        <div class="red-box">
+            <div class="avator"><img src="/images/front/avator.png"/></div>
+            <p>您的好友({{data.sharephone}})邀请您0元领取一款酷炫产品，邀请好友还可以获得奖励喔，快来领取吧！</p>
+            <button id="openBtn">领取</button>
+        </div>
+    </div>
+    {{/if}}
+    {{if data.bActivitySharing !=null}}
+    <!-- 打开红包 -->
+    <div class="pop-up-box open-red">
+        <span class="close-btn"></span>
+
+        <div class="red-box">
+            {{if data.bActivitySharing.besharedRewardValue==null || data.bActivitySharing.besharedRewardValue== 0}}
+            zero
+            {{/if}}
+
+            <strong>&nbsp;
+                {{if data.bActivitySharing.besharedRewardValue != 0}}
+                ￥{{bActivitySharing.besharedRewardValue}}
+                {{/if}}
+            </strong>
+
+            <!--提交表单-->
+            <div class="input-box">
+                <input id="phone" name="phone" type="text" placeholder="输入手机号领红包"/>
+
+                <div class="code-box">
+                    <input id="code" name="code" type="text" placeholder="输入验证码"/>
+                    <input type="button" id="getCode" class="get-code" value="获取"/>
+                </div>
+                <button id="send">领取</button>
+            </div>
+            <!-- 领取完成-->
+            <div class="received">
+                <p>已经放入您的账户(<font id="sharedPhone">180***1234</font>)中，您可前往“个人账户-我的收益”中查看使用</p>
+                <a class="btn" href="#" onclick="bonusRecord()">立即查看</a>
+            </div>
+        </div>
+    </div>
+    {{/if}}
+    <!-- 分享用户登录 -->
+    <div class="pop-up-box share-login">
+        <span class="close-btn"></span>
+
+        <div class="red-box">
+            <strong>我要分享</strong>
+            <!--提交表单-->
+            <div class="input-box">
+                <input id="loginphone" name="loginphone" type="text" placeholder="输入手机号参与分享"/>
+
+                <div class="code-box">
+                    <input id="logincode" name="logincode" type="text" placeholder="输入验证码"/>
+                    <input type="button" id="logingetCode" class="get-code" value="获取"/>
+                </div>
+                <button id="loginsend">立即分享</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 分享红包 -->
+    <div class="pop-up-box share-box">
+        <div class="title">
+            <p>分享有礼</p>
+            <a class="rule" href="/share/ruleDetails?money={{data.bActivitySharing.shareRewardValue}}">规则详情</a>
+        </div>
+        <div class="intro">
+            <span></span>
+
+            <p>本商品参与分享有礼现金奖励活动，分享好友并安装成功，您将获得{{data.bActivitySharing.shareRewardValue}}元现金奖励。同时，您的好友也可以参与分享有礼活动。
+
+            </p>
+        </div>
+        <!--在页面中加入文字式分享按钮 -->
+        <div class="share-item clearfix">
+            <p>分享给好友</p>
+            <a id="share-weibo" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a id="share-weixin" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+            <a id="share-qq" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+        </div>
+        <span class="cancel-ico">取消</span>
+    </div>
+
+    <!-- 分享指引 -->
+    <div class="pop-up-box share-tip">
+        <img width="100%" src="/images/front/share-wx.png"/>
+    </div>
+    </script>
+</div>
+<!--头部-->
+<div class="head">
+    <div class="head-logo">
+        <a href="javascript:;">
+            <img src="../../../images/front/detail_logo.jpg" alt=""/>
+        </a>
+    </div>
+    <div class="head-menu-icon">
+        <a href="javascript:;" onclick="ejectMenu()">
+            <img src="../../../images/front/detail_icon_menu.png" alt=""/>
+        </a>
+    </div>
+    <div class="head-menu menu-hide" id="head-menu">
+        <div class="sanjiao"><img src="../../../images/front/blackTriangle_icon.png"/></div>
+        <div class="head-menu-text"><a href="/cuser/register.htm">注册/登录</a></div>
+        <div class="head-menu-text"><a href="/userinfo/personCenter">个人中心</a></div>
+        <div class="head-menu-text"><a href="/cuser/register.htm">我要分期</a></div>
+        <div class="head-menu-text border-none"><a href="javascript:;" class="follow-btn">关注我们</a></div>
+    </div>
+</div>
+
+<!--轮播图-->
+<div class="swiper-container banner">
+    <div class="swiper-wrapper" id="figureBox">
+        <script type="text/template" id="figureTpl">
+            {{each data.tGoodsPics}}
+
+            {{if $value.img_type == 3}}
+            {{else}}
+            <div class="swiper-slide figureBox-imgBox"><img src="{{$value.img_url}}"/></div>
+            {{/if}}
+            {{/each}}
+        </script>
+    </div>
+    <!-- 如果需要分页器 -->
+    <div class="swiper-pagination"></div>
+</div>
+
+<!--产品详情-->
+<div class="content" id="goodsDetails">
+    <script type="text/template" id="infoTpl">
+        <div class="info">
+            <div class="title">
+                {{if data.bActivitySharing != null}}
+                <div class="open-share"><span></span>
+
+                    <p>分享有礼</p></div>
+                {{/if}}
+                <h3>{{data.tGoods.goodsname}}</h3>
+                <span><strong>￥{{data.tGoods.goodsprice.toFixed(2)}}</strong></span>
+                <span class="title-stages">{{(data.tGoods.goodsprice/12).toFixed(2)}} x 12期</span>
+            </div>
+        </div>
+        <!-- 分享内容-->
+        {{if data.bActivitySharing != null}}
+        <div class="shareText">
+            <div class="shareText-fxyL">分享有礼</div>
+            <div class="shareText-box">
+                {{if data.bActivitySharing.shareRewardValue !=0 && data.bActivitySharing.besharedRewardValue == 0}}
+                <span class="shareText-install">分享给好友安装成功获得{{data.bActivitySharing.shareRewardValue}}元现金奖励</span>
+                {{else if data.bActivitySharing.shareRewardValue ==0 && data.bActivitySharing.besharedRewardValue != 0}}
+                <span class="shareText-install">分享且安装成功送好友{{data.bActivitySharing.besharedRewardValue}}元现金奖励</span>
+                {{else if data.bActivitySharing.shareRewardValue !=0 && data.bActivitySharing.besharedRewardValue != 0}}
+                <span class="shareText-install">分享且安装成功可得{{data.bActivitySharing.shareRewardValue}}元，好友得{{data.bActivitySharing.besharedRewardValue}}元现金奖励</span>
+                {{/if}}
+            </div>
+            <span class="shareText-jkh">
+                <img src="../../../images/front/youjian_icon.png">
+            </span>
+        </div>
+        {{/if}}
+    </script>
+</div>
+<div class="commodityBar">
+    <div class="tab-title" id="tab-title">
+        <ul>
+            <li><a href="javascript:;" class="default-color" onclick="tabSwitch(this,1)">商品详情</a></li>
+            <li><a href="javascript:;" onclick="tabSwitch(this,2)">产品参数</a></li>
+            <li><a href="javascript:;" onclick="tabSwitch(this,3)">门店信息</a></li>
+        </ul>
+    </div>
+    <div class="tab-content">
+        <!-- 商品详情-->
+        <div class="eachDiv details_data" id="l_no2_1" style="display: block;">
+            <div class="detailDrawing">
+                <script type="text/template" id="detailDrawingTpl">
+                    {{each data.tGoodsPics}}
+                    <img src="{{$value.img_url}}" style="width: 100%; height: 100%"/>
+                    {{/each}}
+                </script>
+            </div>
+            <div class="details_year">
+                <span><img src="../../../images/front/icon_validated.png" alt=""/>一年包换</span>
+                <span><img src="../../../images/front/icon_validated.png" alt=""/>品牌认证</span>
+                <span><img src="../../../images/front/icon_validated.png" alt=""/>分期付款</span>
+            </div>
+            <div class="details_advantage">
+                <img src="../../../images/front/detail_pic_advantage.png" alt=""/>
+            </div>
+        </div>
+
+        <!-- 产品参数-->
+        <div class="eachDiv tab-content-parameter" id="l_no2_2" style="display: none">
+            <table cellspacing="0" cellpadding="0" id="category">
+                <script type="text/template" id="categoryTpl">
+                    <tr>
+                        <td>商品类目：</td>
+                        <td>
+                            {{if data.tGoods.typeId == 1}}
+                            汽车用品
+                            {{else if data.tGoods.typeId == 2}}
+                            车联网产品
+                            {{else}}
+                            汽车用品
+                            {{/if}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>品牌名称：</td>
+                        <td>{{data.tGoods.brandName}}</td>
+                    </tr>
+                    <!--<tr>-->
+                    <!--<td>品牌商：</td>-->
+                    <!--<td>深圳市喜卡车联网服务有限公司</td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                    <!--<td>功能描述：</td>-->
+                    <!--<td class="describe_td">-->
+                    <!--<p>行车记录仪</p>-->
+
+                    <!--<p>智能导航</p>-->
+
+                    <!--<p>智能语音</p>-->
+                    <!--</td>-->
+                    <!--</tr>-->
+                    <tr>
+                        <td>型号：</td>
+                        <td>{{data.tGoods.goodsModel}}</td>
+                    </tr>
+                    <tr>
+                        <td>品牌商：</td>
+                        <td>{{data.bUserName}}</td>
+                    </tr>
+                </script>
+            </table>
+
+        </div>
+
+        <!-- 门店信息-->
+        <div class="eachDiv" id="l_no2_3" style="display: none; overflow: hidden;">
+            <div id="store_text">
+                <script type="text/template" id="Store_informationTpl">
+                    {{if data.cFacilitator != null}}
+                    <div class="Store_information clearfix">
+                        <div class="information_img">
+                            {{if data.cFacilitator.imgUrl ==null || data.cFacilitator.imgUrl ==""}}
+                            <img src="../../../images/front/kong.jpg"/>
+                            <div class="recommend">
+                                <img src="../../../images/front/group_icon.png"/>
+                            </div>
+                            {{else}}
+                            <img src="{{data.cFacilitator.imgUrl}}"/>
+                            <div class="recommend">
+                                <img src="../../../images/front/group_icon.png"/>
+                            </div>
+                            {{/if}}
+                        </div>
+                        <div class="information_data">
+                            <p class="p1">{{data.cFacilitator.facilitator_name}}
+
+                            <p>
+
+                            <div class="address">
+                                <span class="span1">地址:</span>
+                                <span class="span2">{{data.cFacilitator.facilitator_address}}</span>
+                            </div>
+                            <span class="span3">电话:{{data.cFacilitator.failitator_phone}}</span>
+                        </div>
+                    </div>
+                    {{else}}
+                    {{each data.tgList}}
+                    <div class="Store_information clearfix">
+                        <div class="information_img">
+                            {{if $value.imgUrl == null || $value.imgUrl == ""}}
+                            <img src="../../../images/front/kong.jpg"/>
+                            {{else}}
+                            <img src="{{$value.imgUrl}}"/>
+                            {{/if}}
+                        </div>
+                        <div class="information_data">
+                            <p class="p1">{{$value.facilitator_name}}
+                            <p>
+
+                            <div class="address">
+                                <span class="span1">地址:</span>
+                                <span class="span2">{{$value.facilitator_address}}</span>
+                            </div>
+                            <span class="span3">电话:{{$value.failitator_phone}}</span>
+                        </div>
+                    </div>
+                    <input class="zhiYin" type="hidden" name="1"/>
+                    {{/each}}
+                    {{/if}}
+                </script>
+            </div>
+            <div class="storeArr_text">
+                <script type="text/template" id="storeArr_textTpl">
+                    {{each data.tgList}}
+                    <div class="Store_information clearfix">
+                        <div class="information_img">
+                            {{if $value.imgUrl == null || $value.imgUrl == ""}}
+                            <img src="../../../images/front/kong.jpg"/>
+                            {{else}}
+                            <img src="{{$value.imgUrl}}"/>
+                            {{/if}}
+                        </div>
+                        <div class="information_data">
+                            <p class="p1">{{$value.facilitator_name}}
+                            <p>
+
+                            <div class="address">
+                                <span class="span1">地址:</span>
+                                <span class="span2">{{$value.facilitator_address}}</span>
+                            </div>
+                            <span class="span3">电话:{{$value.failitator_phone}}</span>
+                        </div>
+                    </div>
+                    {{/each}}
+                </script>
+            </div>
+            <div class="moreStores">
+                <span class="moreStores-btn">更多门店&nbsp&nbsp&nbsp<b>></b></span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="footer-top">
+        <div class="footer-topText follow-btn">
+            <img src="../../../images/front/detail_icon_wechat.png"/>
+            <a href="javascript:;">关注我们</a>
+        </div>
+        <div class="footer-topText">
+            <img src="../../../images/front/detail_icon_customer.png"/>
+            <!--<a href="javascript:;" class="customer" >客服热线</a>-->
+            <a href="tel:0755-86627587">客服热线</a>
+        </div>
+        <div class="footer-topText">
+            <img src="../../../images/front/detail_icon_pc.png"/>
+            <a href="http://www.91youka.com/pcindex.htm">电脑端</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="footer-bottom-box">
+            <img src="../../../images/front/detail_icon_oc.png" class="sty-c"/>
+            2017 深圳市优卡分期科技有限公司 版权所有
+        </div>
+    </div>
+</div>
+
+<!--<div class="purchase">-->
+<!--<a href="javascript:;" class="purchase_btn">立即购买</a>-->
+<!--</div>-->
+
+<!--二维码弹框-->
+<div class="erWeiMa" style="display: none">
+    <div class="erWeiMa-box">
+        <div class="hide-btn">
+            <img src="../../../images/front/close2.png" class="hide-btnImg" alt=""/>
+        </div>
+        <div class="erWeiMa-img">
+            <img src="../../../images/front/youka-qrcode.jpg" alt=""/>
+        </div>
+        <div><p>打开微信-发现-扫一扫，或者长按自动识别二维码</p></div>
+    </div>
+</div>
+
+
+</body>
+<script src="../../../js/plugins/swiper/swiper.min.js"></script>
+<script src="../../../js/jquery-1.8.3.min.js"></script>
+<script src="../../../js/template.js"></script>
+<!-- 引入微信接口js-->
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="../../../js/front/commodityShare.js"></script>
+</html>

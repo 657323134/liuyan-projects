@@ -1,0 +1,488 @@
+/*����ҳ����ʽ*/
+
+/*����ɹ�*/
+.apple-state {
+    background: #f48032;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.apple-state img {
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin: 0 auto;
+}
+
+.apple-state h3, .apple-state p {
+    text-align: center;
+}
+
+.apple-state h3 {
+    font-size: 24px;
+    line-height: 50px;
+}
+
+.order-info {
+    column-span: 0;
+    row-span: 0;
+}
+
+.order-info {
+    padding: 20px 5%;
+    box-sizing: border-box;
+    background: #fff;
+}
+
+.order-info table {
+    border: 1px solid #ddd;
+}
+
+.order-info table tr:not(:last-child) td {
+    border-bottom: 1px solid #ddd;
+}
+
+.order-info table tr td:not(:last-child) {
+    border-right: 1px solid #ddd;
+}
+
+.order-info table tr td {
+    line-height: 30px;
+    padding-left: 10px;
+}
+
+.order-info table tr td:first-child {
+    width: 25%;
+}
+
+.a-btn {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.a-btn a {
+    line-height: 30px;
+    border-radius: 3px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+.a-btn .look-order-btn {
+    background: #f47c2c;
+    color: #fff;
+    margin-right: 30px;
+    border: 2px solid #f47c2c;
+
+}
+
+.a-btn .back-home-btn {
+    color: #666;
+    border: 2px solid #666;
+}
+
+/*�ҵĶ���*/
+.my-order .choose-box {
+    background: #fff;
+    margin: 30% auto 0 auto;
+    width: 80%;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.my-order h3 {
+    text-align: center;
+    line-height: 60px;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.my-order h3 span {
+    color: #f47c2c;
+}
+
+.my-order .choose-box .radio {
+    line-height: 30px;
+    margin: 10px 0px;
+    font-size: 16px;
+}
+
+.my-order .choose-box a {
+    color: #fff;
+    background: #f47c2c;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 18px;
+    display: block;
+    text-align: center;
+    width: 120px;
+    margin: 20px auto;
+    height: 30px;
+    line-height: 30px;
+}
+
+.radio-btn {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    float: left;
+    margin: 3px 7px 0 0;
+    cursor: pointer;
+    position: relative;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 1px #ccc;
+    background: rgb(255, 255, 255);
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 1)), color-stop(47%, rgba(246, 246, 246, 1)), color-stop(100%, rgba(237, 237, 237, 1)));
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
+    background: -o-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
+    background: -ms-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ededed', GradientType=0);
+}
+
+.radio-btn i {
+    border: 1px solid #E1E2E4;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+}
+
+.radio-btn input[type="radio"], .check-box input[type="checkbox"] {
+    opacity: 0;
+    width: 20px;
+    height: 20px;
+    margin: 0px;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+}
+
+.radio-btn input[type="radio"]:checked + i {
+    -moz-box-shadow: inset 0 0 5px 1px #f47c2c;
+    -webkit-box-shadow: inset 0 0 5px 1px #f47c2c;
+    box-shadow: inset 0 0 5px 1px #f47c2c;
+    background: #f47c2c;
+}
+
+.pop-up .choose-box {
+    position: relative;
+}
+
+.pop-up .close-ico {
+    width: 24px;
+    height: 24px;
+    background: url("/images/front/close-icon.png") #ccc no-repeat center;
+    background-size: 14px;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    border-radius: 100%;
+}
+
+.verification input {
+    line-height: 30px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width: 40%;
+}
+
+.verification span {
+    color: #fff;
+    background: #f47c2c;
+    padding: 2px 0px;
+    border-radius: 6px;
+    font-size: 16px;
+    text-align: center;
+    width: 110px;
+    margin: 10px auto;
+    height: 30px;
+    line-height: 30px;
+    display: inline-block;
+}
+
+.beyond-pay p {
+    text-align: center;
+    font-size: 16px;
+    margin: 20px auto;
+}
+
+.beyond-pay table {
+    width: 100%;
+}
+
+.beyond-pay table td {
+    width: 50%;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #ccc;
+    padding-left: 5px;
+}
+
+.beyond-pay table tr td:not(:last-child) {
+    border-right: 0px solid #ccc;
+}
+
+.beyond-pay table tr:not(:last-child) td {
+    border-bottom: 0px solid #ccc;
+}
+
+/*.pop-up .beyond-pay table td{width:50%;height:30px; line-height:30px;}*/
+
+.order-box {
+    background: #fff;
+    overflow: hidden;
+}
+
+.order-box .order-item {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 0px;
+}
+
+.order-box .order-item:last-child {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 50px;
+}
+
+.order-box .order-item .order-top {
+    width: 94%;
+    margin: 0 3%;
+    height: 40px;
+    line-height: 40px;
+    overflow: hidden;
+    border-bottom: 1px solid #ECE9F5;
+}
+
+.order-box .order-item .order-top .top-left {
+    width: 80%;
+    color: #333;
+    font-size: 14px;
+    float: left;
+    text-align: left;
+}
+
+.order-box .order-item .order-top .top-right {
+    width: 20%;
+    color: #666;
+    font-size: 12px;
+    float: left;
+    text-align: right;
+}
+
+.order-box .order-item .order-details {
+    width: 96%;
+    margin: 0 2%;
+    height: 80px;
+    overflow: hidden;
+    padding: 10px 0;;
+}
+
+.order-box .order-item .order-details .details-left {
+    width: 20%;
+    height: 80px;
+    float: left;
+}
+
+.order-box .order-item .order-details .details-left img {
+    width: 65px;
+    height: 65px;
+    padding: 7px;
+    border: 1px solid #ddd;
+}
+
+.order-box .order-item .order-details .details-right {
+    width: 72%;
+    float: right;
+    height: 80px;
+    overflow: hidden;
+    position: relative;
+}
+
+.order-box .order-item .order-details .details-right .order-title {
+    float: left;
+    width: 70%;
+    max-height: 40px;
+    overflow: hidden;
+    line-height: 20px;
+    color: #222;
+    font-size: 12px;
+}
+
+.order-box .order-item .order-details .details-right .order-standard {
+    float: left;
+    max-height: 30px;
+    overflow: hidden;
+    line-height: 15px;
+    color: #999;
+    font-size: 10px;
+}
+
+.order-box .order-item .order-details .details-right .order-standard span {
+    line-height: 30px;
+    border-radius: 3px;
+    padding: 0px 10px;
+    box-sizing: border-box;
+}
+
+.order-box .order-item .order-details .details-right .order-standard span:nth-child(2n) {
+    background: #f47c2c;
+    border: 1px solid #f47c2c;
+    color: #fff;
+}
+
+.order-box .order-item .order-details .details-right .order-standard span:nth-child(2n+1) {
+    color: #666;
+    border: 1px solid #666;
+}
+
+.order-box .order-item .order-details .details-right .order-money {
+    float: right;
+    width: 30%;
+    height: 20px;
+    line-height: 20px;
+    color: #666;
+    font-size: 12px;
+    text-align: right;
+}
+
+.order-box .order-item .order-table {
+    background: #eee;
+    color: #666;
+    overflow: hidden;
+    display: none;
+}
+
+.order-box .order-item .order-table table {
+    width: 90%;
+    margin: 20px auto;
+}
+
+.order-box .order-item .order-table td {
+    line-height: 30px;
+    width: 25%;
+}
+
+/*��ѡ��*/
+.check-box {
+    width: 25px;
+    margin: 20px 100px;
+    position: relative;
+}
+
+.check-box input {
+    width: 25px;
+    height: 25px;
+    z-index: 10;
+    position: relative;
+    margin: 0;
+    opacity: 0;
+}
+
+.check-box label {
+    cursor: pointer;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 0;
+    left: 0;
+    border-radius: 3px;
+    background: #d8d8d8;
+}
+
+.check-box label:after {
+    /*display: none;*/
+    opacity: 0;
+    content: '';
+    position: absolute;
+    width: 9px;
+    height: 5px;
+    background: transparent;
+    top: 6px;
+    left: 7px;
+    border: 3px solid #fff;
+    border-top: none;
+    border-right: none;
+
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.c-e72525 {
+    color: #e72525;
+}
+
+.check-box > input[type=checkbox]:checked + label {
+    background: #e72525;
+}
+
+.check-box > input[type=checkbox]:checked + label::after {
+    /*display: block;*/
+    opacity: 1;
+}
+
+.order-operate {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;;
+    color: #999;
+    font-size: 14px;
+    background: #fff;
+}
+
+.order-operate p {
+    float: left;
+    padding-left: 10px;
+}
+
+.order-operate .sum-num {
+    font-size: 24px;
+    color: #f47c2c;
+}
+
+.order-operate .pay-btn {
+    float: right;
+    width: 120px;
+    height: 50px;
+    line-height: 50px;
+    color: #fff;
+    background: #f47c2c;
+    font-size: 24px;
+    text-align: center;
+}
+
+/*没有订单提示*/
+.noOrder {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+.noOrder .noOrder_box {
+    width: 100%;
+    height: 100%;
+    margin-top: 45%;
+    text-align: center;
+}
+.noOrder_box img {
+    width: 145px;
+    height: 120px;
+}
+.noOrder_box p {
+    font-family: Microsoft YaHei, Arial;
+    color: #999999;
+    font-size: 14px;
+}

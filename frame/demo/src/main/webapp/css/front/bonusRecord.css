@@ -1,0 +1,155 @@
+/*奖励记录*/
+.bonus-record .bonus-list {
+    background: #fff;
+}
+
+.bonus-record .blank {
+    margin: 20% auto;
+    display: block;
+}
+
+.bonus-record .weui-navbar__item.weui-bar__item_on {
+    color: #ef2034;
+    border-bottom: 3px solid #ef2034;
+    background: none;
+}
+
+.bonus-record .weui-tab__panel .weui-panel__bd:last-child {
+    display: none;
+}
+
+.bonus-record .weui-tab__panel .weui-media-box__hd .red-icon {
+    display: block;
+    height: 50px;
+    width: 50px;
+    background: url(/images/share.png) no-repeat 6px -376px;
+    background-size: 537px 431px;
+}
+
+.bonus-record .weui-tab__panel .weui-media-box__bd span {
+    line-height: 30px;
+}
+
+.bonus-record .weui-tab__panel .weui-media-box__bd .weui-media-box__title span:last-child,
+.bonus-record .weui-tab__panel .weui-media-box__bd .weui-media-box__desc span:last-child {
+    float: right;
+}
+
+.bonus-record .weui-tab__panel .weui-media-box__bd .weui-media-box__desc span:last-child {
+    color: #ef2034;
+}
+
+/*弹出框*/
+.bonus-record .pop-up-box {
+    margin: 30% auto;
+    position: relative;
+    background: #fff;
+    width: 80%;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.bonus-record .pop-up-box .close-btn {
+    top: 15px;
+}
+
+.bonus-record .pop-up-box .title {
+    line-height: 50px;
+    text-align: center;
+    font-size: 18px;
+    border-bottom: 1px solid #e5e5e5;
+    font-weight: normal;
+    color: #333;
+}
+
+.bonus-record .bonus-details .bonus-num h2 {
+    text-align: center;
+    font-size: 30px;
+    line-height: 60px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.bonus-record .bonus-details .bonus-info {
+    width: 80%;
+    margin: 20px auto;
+    font-size: 16px;
+}
+
+.bonus-record .bonus-details .bonus-info li span {
+    line-height: 40px;
+    vertical-align: top;
+    font-size: 12px;
+}
+
+.bonus-record .bonus-details .bonus-info li span:first-child {
+    width: 30%;
+    display: inline-block;
+}
+
+.bonus-record .bonus-details .bonus-info li .avator {
+    width: 40px;
+    line-height: 40px;
+    height: 40px;
+    display: inline-block;
+}
+
+.bonus-record .avator img {
+    width: 100%;
+}
+
+.bonus-record .bonus-details .btn {
+    width: 80%;
+    height: 40px;
+    font-size: 16px;
+    margin: 10px auto;
+    line-height: 40px;
+    color: #fff;
+    background: #ef2034;
+    text-align: center;
+    border: none;
+    display: block;
+    border-radius: 5px;
+}
+
+.bonus-record .bonus-details .grey-btn {
+    color: #fff;
+    background: #ccc;
+}
+
+.bonus-record .buy-desc .desc {
+    width: 80%;
+    margin: 20px auto;
+    font-size: 14px;
+}
+
+.bonus-record .buy-desc .avator {
+    width: 50px;
+    float: left;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.bonus-record .buy-desc .name {
+    line-height: 50px;
+    height: 50px;
+}
+
+.bonus-record .buy-desc p {
+    line-height: 30px;
+    margin: 20px auto;
+}
+
+.bonus-record .buy-desc .i-know {
+    display: block;
+    width: 80%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: none;
+    border-radius: 3px;
+    font-size: 16px;
+    color: #ef2034;
+    margin: 20px auto;
+    border: 1px solid #ef2034;
+}

@@ -1,0 +1,133 @@
+body {
+    padding: 0px;
+    background: #e9edf3;
+    margin: 0px;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft Hei", sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+}
+
+.title {
+    font-size: 27px;
+    color: #666;
+    text-align: center;
+    margin: 30px auto 30px auto;
+    font-family: "微软雅黑", 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    padding: 0 6%;
+}
+
+#user_login {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 85%;
+    height: 350px;
+    margin: 20px auto;
+}
+
+.coop-logo {
+    text-align: center;
+    margin: 20px;
+}
+
+.coop-logo img:first-child {
+    border-right: 1px solid #ccc;
+    width: 183px;
+}
+
+.coop-logo img:last-child {
+    vertical-align: top;
+    margin: 25px 0 0 15px;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.logo {
+    width: 180px;
+    margin: 40px auto;
+}
+
+.input-cell span {
+    float: left;
+    display: inline-block;
+    width: 38px;
+    height: 30px;
+    border-right: 1px solid #eee;
+}
+
+.input-cell.user span {
+    background: url(../images/sprite.png) -166px 2px no-repeat;
+}
+
+.input-cell.user.hover span {
+    background: url(../images/sprite.png) -166px -30px no-repeat;
+    border-right: 1px solid #1da0ff;
+}
+
+.input-cell.pass span {
+    background: url(../images/sprite.png) -199px 1px no-repeat;
+}
+
+.input-cell.pass.hover span {
+    background: url(../images/sprite.png) -199px -30px no-repeat;
+    border-right: 1px solid #1da0ff;
+}
+
+
+.input-cell {
+    background: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 90%;
+    height: 30px;
+    margin: 30px auto;
+    overflow: hidden;
+    padding: 5px;
+}
+
+.input-cell input {
+    float: left;
+    width: 70%;
+    display: inline-block;
+    border: none;
+    line-height: 30px;
+    height: 30px;
+    font-size: 16px;
+    background: none;
+    color: #1da0ff;
+    margin-left: 10px;
+}
+
+.input-cell.hover {
+    border: 1px solid #1da0ff;
+    box-shadow: 0 2px 2px 0 #c6e7ff;
+}
+
+#btnLogin {
+    color: #fff;
+    background: #1da0ff;
+    border-radius: 4px;
+    width: 180px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 24px;
+    text-align: center;
+    margin: 30px auto;
+    cursor: pointer;
+}
+
+#btnLogin:hover {
+    background: #1992e9;
+}
+
+footer {
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+    color: #999;
+    padding: 0 7%;
+}

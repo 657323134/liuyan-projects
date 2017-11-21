@@ -1,0 +1,1319 @@
+/*??????????*/
+body {
+    font-family: PingFangSC-Regular, Helvetica, "Droid Sans", Arial, sans-serif;
+    background: #f0f0f0;
+}
+
+.ui-btn_primary {
+    background: #ef2034;
+}
+
+header {
+    width: 94%;
+    height: 44px;
+    line-height: 44px;
+    padding: 0 3%;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 600;
+    border-bottom: 1px solid #ccc;
+}
+
+header .back-btn {
+    display: block;
+    width: 23px;
+    height: 44px;
+    background: url("/images/businesses/back-icon.png") no-repeat center;
+    background-size: 23px;
+}
+
+header .title {
+    font-size: 20px;
+    color: #666;
+}
+
+header .header-right {
+    height: 44px;
+}
+
+.container {
+    margin-top: 45px;
+}
+
+.weui-vcode-btn {
+    color: #ef2034;
+}
+
+a {
+    color: #333;
+}
+
+/*???*/
+.html-100 {
+    height: 100%;
+}
+
+.login {
+    background: url("/images/businesses/running-car.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+
+.login .page__bd {
+    width: 90%;
+    margin: 20% auto 0 auto;
+}
+
+.login .weui-tab {
+    background: #fff;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.weui-navbar {
+    background-color: #f9f9f9;
+}
+
+.login .page__bd .page__title {
+    text-align: center;
+    margin: 30px auto;
+    color: #fff;
+}
+
+.weui-navbar__item.weui-bar__item_on {
+    border-bottom: 3px solid #ef2034;
+    background: #fff;
+}
+
+.login .weui-tab__panel .weui-label {
+    width: 60px;
+}
+
+.login .weui-tab__panel .password-label {
+    width: 80px;
+}
+
+.login #loginBtn {
+    width: 50%;
+    margin: 30px auto 10px auto;
+}
+
+.login .weui-vcode-btn {
+    padding: 0 .0em 0 .3em;
+}
+
+.login .weui-cells {
+    margin: 0;
+}
+
+.login .weui-cell:not(:last-child) {
+    padding: 20px 15px;
+}
+
+.login .weui-cell.login-type {
+    display: none;
+}
+
+.login .forget-password {
+    display: block;
+    text-align: center;
+    margin: 20px;
+    color: #ef2034;
+}
+
+.login .weui-cell.flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+}
+
+/*???*/
+#headerMain {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    background-image: linear-gradient(45deg, #f82e42 0%, #fa6977 100%);
+    overflow: hidden;
+}
+
+#headerMain > a {
+    position: absolute;
+    top: 10px;
+    display: block;
+    width: 30px;
+    height: 30px;
+}
+
+#headerMain > a img {
+    width: 100%;
+}
+
+#headerMain > a.setting {
+    left: 10px;
+}
+
+#headerMain > a.message {
+    right: 10px;
+}
+
+#headerMain_bk {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 210px;
+}
+
+#headerMain_portrait {
+    position: relative;
+    display: inline-block;
+    z-index: 2;
+    margin-top: 55px;
+    width: 70px;
+    height: 70px;
+}
+
+#headerMain_portrait img:nth-child(1) {
+    width: 100%;
+    border-radius: 5em;
+    border: 2px solid #fff;
+    box-sizing: border-box;
+}
+
+#headerMain_portrait span#tagMark {
+    position: absolute;
+    z-index: 99;
+    left: 15px;
+    bottom: -10px;
+    width: 36px;
+    background: #ffd600;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    font-size: 12px;
+    color: #6b2c06;
+    box-sizing: border-box;
+}
+
+#headerMain p {
+    color: #ffc4c4;
+    font-size: 14px;
+}
+
+#headerMain p#buserName {
+    font-size: 16px;
+    color: #fff;
+    line-height: 30px;
+    margin-top: 10px;
+}
+
+#headerMain p#storeName {
+    position: relative;
+    z-index: 2;
+    font-size: 12px;
+    color: #ffacb4;
+}
+
+#headerMain #storeName span {
+    float: left;
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+
+.index .user-data {
+    margin: 15px 0;
+    color: #333;
+}
+
+.index .user-data .weui-flex__item:first-child {
+    border-right: 1px solid #ffbdc3;
+}
+
+.index .user-data h3 {
+    color: #fff;
+    font-weight: bold;
+}
+
+.index .user-data h3, .index .user-data p {
+    text-align: center;
+    line-height: 25px;
+    font-weight: normal;
+}
+
+.index .user-operation {
+    color: #666;
+    background: #fff;
+    margin: 15px 0;
+    font-size: 14px;
+}
+
+.index .user-operation p {
+    text-align: center;
+    margin: 0px auto 10px auto;
+}
+
+.index .user-operation img {
+    text-align: center;
+    width: 30%;
+    display: block;
+    margin: 15px auto 10px auto;
+}
+
+.index .last-order-title {
+    margin: 1.8em auto 0em auto;
+}
+
+.index .last-order-title .weui-loadmore__tips {
+    background: #f0f0f0;
+    color: #666;
+}
+
+.index .order-list .weui-form-preview__bd {
+    background: #f9f9f9;
+    color: #666;
+    border-bottom: 1px solid #fff;
+}
+
+.index .order-list .weui-form-preview__bd .weui-form-preview__item:not(:last-child) {
+    border-bottom: 1px solid #fff;
+    padding-bottom: 15px;
+}
+
+.index .order-list .weui-form-preview__bd .weui-form-preview__value {
+    background: #f9f9f9;
+    color: #666;
+}
+
+.index .order-list .weui-form-preview__ft .total-info {
+    font-size: 14px;
+}
+
+.index .order-list .weui-form-preview__ft .total-info strong {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.index .tip {
+    position: relative;
+    background: #fff;
+}
+
+.index .tip .close-btn {
+    width: 24px;
+    height: 24px;
+    background: url("/images/front/close-icon.png") #ccc no-repeat center;
+    background-size: 14px;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    border-radius: 100%;
+}
+
+.index .tip p {
+    width: 92%;
+    color: #F47C2C;
+    font-size: 12px;
+    padding: 0 2%;
+    line-height: 20px;
+}
+
+/*???????????鹫?????*/
+.order-list {
+    margin-bottom: 15px;
+}
+
+.order-list .weui-form-preview__hd {
+    padding: 0 15px;
+}
+
+.order-list .weui-form-preview__label {
+    color: #333;
+    font-size: 12px;
+    /*width: 50%;*/
+    text-align: left;
+    text-align-last: left;
+    font-size: 14px;
+    text-align: left;
+    text-align-last: left;
+}
+
+.order-list .weui-form-preview__hd .weui-form-preview__value {
+    font-size: 0.7em;
+    margin-right: 10px;
+    color: #999;
+}
+
+.order-list .weui-form-preview__hd em.weui-form-preview__value:after {
+    content: " ";
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    border-width: 2px 2px 0 0;
+    border-width: 1px 1px 0 0;
+    border-color: #999;
+    border-style: solid;
+    -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+    transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+    position: relative;
+    top: -2px;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    margin-top: -6px;
+}
+
+.order-list .weui-form-preview__bd .weui-form-preview__item {
+    /*margin-bottom: 15px;*/
+}
+
+.order-list span.weui-form-preview__value {
+    line-height: 30px;
+}
+
+.order-list .weui-form-preview__ft .weui-btn_mini {
+    margin: 10px 20px;
+}
+
+.order-list .weui-form-preview__ft .total-info {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.order-list .weui-form-preview__ft .total-info i, .order-list .weui-form-preview__ft .total-info strong {
+    color: #f47c2c;
+    font-weight: normal;
+}
+
+.all-order {
+    display: block;
+    text-align: center;
+    line-height: 30px;
+    margin: 10px auto;
+    color: #666;
+    font-size: 14px;
+}
+
+/*??????*/
+.add-order .add-product1 {
+    margin-top: 50px;
+}
+
+/*.add-order .add-product2{ display:none;}*/
+.add-order .add-product2 .weui-cells__title span {
+    float: right;
+    font-size: 14px;
+    color: #999;
+}
+
+.add-order .weui-cells__title {
+    font-size: 18px;
+    color: #333333;
+    line-height: 30px;
+}
+
+.add-order .add-product-btn {
+    text-align: center;
+    margin: 10px auto;
+    padding-left: 20px;
+    width: 80px;
+    height: 20px;
+    background: url("/images/businesses/add-pro.svg") no-repeat;
+    -webkit-background-size: 20px 20px;
+    background-size: 20px 20px;
+}
+
+.add-order #createCode {
+    border-radius: 0;
+    margin-top: 20px
+}
+
+.add-order .pop-up {
+    display: none;
+}
+
+.add-order .pop-up .weui-dialog__hd {
+    position: relative;
+}
+
+.add-order .pop-up .weui-dialog__hd .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+}
+
+.add-order #qrCode .code-img {
+    width: 100%;
+}
+
+.add-order #qrCode .weui-dialog__ft {
+    text-align: center;
+    display: block;
+    font-size: 14px;
+    color: #999;
+}
+
+.add-order #returnPlan .weui-dialog {
+    width: 90%;
+}
+
+.add-order #returnPlan .table-box {
+    width: 100%;
+    max-height: 400px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.add-order #returnPlan table {
+    margin-top: 10px;
+    border-collapse: collapse;
+    border: 1px solid #aaa;
+    width: 100%;
+}
+
+.add-order #returnPlan table td {
+    padding: 3px;
+    height: 30px;
+    vertical-align: middle;
+    background: #fff no-repeat center;
+    border: 1px solid #dadada;
+    text-align: center;
+}
+.add-order input:disabled{
+    /*color: #999;*/
+    -webkit-text-fill-color: rgba(128, 128, 128, 1);
+    -webkit-opacity: 1;
+}
+.add-order #returnPlanBtn {
+    color: #ef2034;
+}
+
+.add-order .select-num {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    height: 30px;
+    overflow: hidden;
+    width: 120px;
+    float: right;
+}
+
+.add-order .select-num span {
+    display: inline-block;
+    width: 30px;
+    font-size: 16px;
+    line-height: 30px;
+    height: 30px;
+    text-align: center;
+    overflow: hidden;
+}
+.add-order .select-num span.subtract {
+    float: left;
+}
+.add-order .select-num span.add {
+    float: right;
+}
+
+.add-order .select-num input {
+    font-size: 16px;
+    line-height: 16px;
+    border-width: 0 1px 0 1px;
+    box-sizing: content-box;
+    border-style: solid;
+    border-color: #ccc;
+    height: 30px;
+    width: 58px;
+    text-align: center;
+    vertical-align: top;
+    border-radius: 0;
+}
+
+.add-order .card-id .weui-cell__bd input:first-child {
+    /*border-bottom: 1px solid #ccc;*/
+    /*margin-bottom: 10px;*/
+    /*padding-bottom: 10px;*/
+    border-radius: 0;
+}
+
+.add-order .card-id {
+    padding-bottom: 0;
+    padding-left: 0;
+}
+
+.add-order .card-id-box:first-child{
+    border-top: 1px solid #ececec;
+}
+
+.card-id .sim-box {
+    width: 130%;
+    height: 30px;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+}
+
+@media screen and (max-width: 414px) {
+    .card-id .sim-box {
+        width: 160%;
+        height: 30px;
+        border-bottom: 1px solid #ccc;
+        position: relative;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .card-id .sim-box {
+        width: 140%;
+        height: 30px;
+        border-bottom: 1px solid #ccc;
+        position: relative;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .card-id .sim-box {
+        width: 130%;
+        height: 30px;
+        border-bottom: 1px solid #ccc;
+        position: relative;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .card-id .sim-box {
+        width: 110%;
+        height: 30px;
+        border-bottom: 1px solid #ccc;
+        position: relative;
+    }
+}
+
+.sim-box .sim-box-left {
+    float: left;
+}
+
+.card-id .sim-box .sim-box-img {
+    float: right;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.sim-box .sim-box-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.card-id .ime-box {
+    width: 130%;
+    height: 30px;
+    margin-top: 10px;
+    position: relative;
+}
+
+@media screen and (max-width: 414px) {
+    .card-id .ime-box {
+        width: 160%;
+        height: 30px;
+        margin-top: 10px;
+        position: relative;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .card-id .ime-box {
+        width: 140%;
+        height: 30px;
+        margin-top: 10px;
+        position: relative;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .card-id .ime-box {
+        width: 130%;
+        height: 30px;
+        margin-top: 10px;
+        position: relative;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .card-id .ime-box {
+        width: 110%;
+        height: 30px;
+        margin-top: 10px;
+        position: relative;
+    }
+}
+
+.ime-box .ime-box-left {
+    float: left;
+}
+
+.card-id .ime-box .ime-box-img {
+    float: right;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.ime-box .ime-box-img img {
+    width: 100%;
+    height: 100%;
+}
+
+    /*???????*/
+.order-record .weui-tab__panel /*.order-list:last-child{ display: none;}*/
+.order-record .weui-tab {
+    background: #fff;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.order-record .page__bd .page__title {
+    text-align: center;
+    margin: 30px auto;
+    color: #fff;
+}
+
+.order-record .weui-navbar__item.weui-bar__item_on {
+    border-bottom: 3px solid #ef2034;
+    background: none;
+}
+
+/*????????*/
+/*??????*/
+.steps-bar {
+    background: #fff;
+    overflow: hidden;
+}
+
+.ui-steps-round {
+    font-size: 0px;
+    line-height: 0px;
+    margin: 18px 8%;
+}
+
+.ui-steps-round > div {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+}
+
+.ui-steps-round > div .wrap:before,
+.ui-steps-round > div .wrap:after {
+    display: table;
+    content: "";
+    line-height: 0;
+}
+
+.ui-steps-round > div .wrap:after {
+    clear: both;
+}
+
+.ui-steps-round > div > label {
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 12px;
+    line-height: 12px;
+    height: 12px;
+    margin-top: 6px;
+    color: #999;
+    cursor: default;
+    text-align: center;
+    margin-left: -25px;
+    position: relative;
+    left: 15px;
+}
+
+.ui-steps-round > div.select > label {
+    color: #ef2034;
+}
+
+.ui-steps-round > div:first-child > label {
+    width: auto;
+    max-width: 50%;
+    margin-left: 0;
+    left: -8px;
+}
+
+.ui-steps-round > div:last-child,
+.ui-steps-round > div.last {
+    width: 30px !important;
+}
+
+.ui-steps-round > div:last-child > label,
+.ui-steps-round > div.last > label {
+    position: absolute;
+    width: auto;
+    margin-left: 0;
+    left: auto;
+    right: 18px;
+}
+
+.ui-steps-round > div .round {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 12px;
+    color: #FFF;
+    line-height: 22px;
+    text-align: center;
+    float: left;
+    overflow: hidden;
+    text-indent: 999px;
+}
+
+.ui-steps-round > div .bar {
+    margin: 15px 10px 0px 40px;
+    width: 200px;
+    height: 2px;
+    vertical-align: middle;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    background: #eee;
+}
+
+/*.ui-steps-round > .finished .round { border: 4px #ef2034 solid; background-color: #ef2034; color: #ffffff; }*/
+.ui-steps-round > .finished .bar {
+    background-color: #ef2034;
+}
+
+/*.ui-steps-round > .current .round { border: 4px #4cb9fc solid; background-color: #4cb9fc; }*/
+.ui-steps-round > div:nth-child(1) .round {
+    background: url("/images/businesses/steps-1.svg") no-repeat;
+    background-size: 30px 30px;
+}
+
+.ui-steps-round > div:nth-child(2) .round {
+    background: url("/images/businesses/steps-2.svg") no-repeat;
+    background-size: 30px 30px;
+}
+
+.ui-steps-round > div:nth-child(3) .round {
+    background: url("/images/businesses/steps-3.svg") no-repeat;
+    background-size: 30px 30px;
+}
+
+.ui-steps-round > div:nth-child(4) .round {
+    background: url("/images/businesses/steps-4.svg") no-repeat;
+    background-size: 30px 30px;
+}
+
+.ui-steps-round > div.select:nth-child(2) .round {
+    background: url("/images/businesses/steps-sel-2.svg") no-repeat;
+    background-size: 30px 30px;
+}
+
+.ui-steps-round > div.select:nth-child(3) .round {
+    background: url("/images/businesses/steps-sel-3.svg") no-repeat;
+    background-size: 30px 30px;
+}
+
+.ui-steps-round > div.select:nth-child(4) .round {
+    background: url("/images/businesses/steps-sel-4.svg") no-repeat;
+    background-size: 30px 30px;
+}
+
+.ui-steps-round > .current .bar {
+    background-color: #ef2034;
+}
+
+.ui-steps-round > .todo > label {
+    color: #999999;
+}
+
+/*.ui-steps-round > .todo .round { border: 4px #d3d3d3 solid; background-color: #FFF; color: #999999; }*/
+.ui-steps-round > .todo .bar {
+    background-color: #eeeeee;
+}
+
+.steps-round-auto {
+    display: table;
+    width: 90%;
+}
+
+.steps-round-auto > div {
+    display: table-cell;
+}
+
+.steps-round-auto > div .bar {
+    width: auto;
+}
+
+.steps-3 > div {
+    width: 50%;
+}
+
+.steps-4 > div {
+    width: 33%;
+}
+
+.steps-5 > div {
+    width: 25%;
+}
+
+.steps-6 > div {
+    width: 20%;
+}
+
+.steps-7 > div {
+    width: 16%;
+}
+
+.upload-img {
+    width: 96%;
+    padding: 0 3% 0 2%;
+    position: relative;
+    float: left;
+}
+
+.upload-img img {
+    width: 100%;
+    height: 130px;
+    margin-top: 10px;
+    border: 1px dashed #ccc;
+}
+
+.upload-img .img-box #alttext-container {
+    border-width: 0px;
+!important
+}
+
+.upload-img input[type="file"] {
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    position: absolute;
+    left: 50%;
+    top: 45px;
+    margin: 0 0 0 -40px;
+    opacity: 0;
+    -webkit-appearance: none;
+    z-index: 10;
+}
+
+.upload-img .upload-btn {
+    width: 50px;
+    height: 50px;
+    line-height: 30px;
+    position: absolute;
+    left: 50%;
+    top: 45px;
+    margin: 0 0 0 -25px;
+    color: #f47c2c;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 6px;
+    background: url("/images/businesses/photo.svg") no-repeat;
+    -webkit-background-size: 50px 50px;
+    background-size: 50px 50px;
+}
+
+.upload-img .upload-name {
+    width: 100%;
+    /*height: 40px;*/
+    line-height: 30px;
+    text-align: center;
+    font-size: 12px;
+    color: #666
+}
+
+.upload-img .reset-btn {
+    width: 20px;
+    height: 20px;
+    background: url("/images/businesses/jian-icon.png") no-repeat center;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    background-size: 20px;
+    z-index: 99;
+    display: none;
+}
+
+/*???????*/
+.manage-staff .ui-float {
+    width: 90%;
+    margin: 60px auto;
+}
+
+.manage-staff .ui-float__item {
+    float: left;
+    width: 44%;
+    min-width: 100px;
+    background: #fff;
+    margin-bottom: 20px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.manage-staff .ui-float__item {
+    margin: 20px 3%;
+}
+
+.manage-staff .ui-float__item .avator-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 20px auto;
+}
+
+.manage-staff .ui-float__item .avator-img img {
+    width: 100%
+}
+
+.manage-staff .ui-float__item h3, .manage-staff .ui-float__item h4 {
+    text-align: center;
+    line-height: 30px;
+}
+
+.manage-staff .ui-float__item h4 {
+    color: #ef2034;
+}
+
+.manage-staff .ui-float__item .add-staff-btn {
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    color: #ccc;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    margin: 40px auto;
+    font-size: 60px;
+    text-align: center;
+}
+
+/*?????*/
+.view-staff .weui-flex {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.view-staff .weui-flex .weui-flex__item {
+    margin: 0 20px;
+}
+
+/*??????????*/
+.modify-staff .weui-btn {
+    margin: 20px;
+}
+
+.modify-staff .weui-toptips {
+    position: relative;
+}
+
+.view-staff .weui-toptips {
+    position: relative;
+}
+
+.upload-product .weui-toptips {
+    position: relative;
+}
+
+/*???????*/
+.my-income .my-money {
+    background-image: linear-gradient(45deg, #f82e42 0%, #fa6977 100%);
+    overflow: hidden;
+}
+
+.my-income .my-money .weui-cells__title {
+    font-size: 18px;
+    color: #ffcbd0;
+}
+
+.my-income .my-money .money-num {
+    line-height: 60px;
+    font-size: 20px;
+    padding-left: 20px;
+    color: #fff;
+}
+
+.my-income .my-money .money-num strong {
+    font-size: 40px;
+    margin-right: 10px;
+}
+
+/*???????п?*/
+.manage-card .card-show {
+    position: relative;
+    width: 80%;
+    margin: 70px auto 10px auto;
+}
+
+.manage-card .card-show h2, .manage-card .card-show p {
+    position: absolute;
+    left: 20px;
+    color: #fff;
+}
+
+.manage-card .card-show h2 {
+    top: 5%;
+}
+
+.manage-card .card-show p {
+    top: 60%;
+    font-size: 18px;
+}
+
+.manage-card .card-show img {
+    width: 100%;
+    height: auto;
+}
+
+.manage-card .page__desc {
+    font-size: 12px;
+    margin: 10px;
+    color: #999;
+}
+
+/*???????*/
+.info-center .weui-media-box__desc {
+    display: none;
+}
+
+/*????*/
+.withdraw .withdraw-num {
+    width: 90%;
+}
+
+.withdraw .page__desc {
+    text-align: right;
+    margin: 10px;
+    font-size: 14px;
+    color: #999;
+}
+
+.withdraw .weui-btn {
+    margin: 20px;
+}
+
+/*???????б?*/
+.flow-list .weui-cell span {
+    color: #999;
+    font-size: 12px;
+}
+
+.flow-list .weui-cell .weui-cell__ft {
+    color: #ee3c43;
+}
+
+/*??????*/
+/*.manage-product .product-list:last-child{display: none;}*/
+.manage-product .p {
+    display: block;
+    width: 60px;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 30px;
+    background: url("/images/businesses/upload-icon.png") 0px 3px no-repeat;
+    background-size: 20px 20px;
+    margin: 0 auto;
+}
+
+.manage-product .weui-panel__hd a {
+    display: block;
+    width: 60px;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 30px;
+    background: url("/images/businesses/upload-icon.png") 0px 3px no-repeat;
+    background-size: 20px 20px;
+    margin: 0 auto;
+}
+
+.manage-product .weui-panel__bd {
+    border-bottom: 1px solid #ccc;
+}
+
+.manage-product .weui-panel__bd p {
+    line-height: 20px;
+}
+
+.manage-product span.delete {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url("/images/businesses/delete-icon.png") 0px 0px no-repeat;
+    background-size: 20px 20px;
+    margin: 0 0 30px 20px;
+}
+
+.manage-product .weui-media-box__ft p {
+    color: #ee3c43;
+}
+
+.manage-product .product-list:last-child span:last-child {
+    text-align: right;
+    float: right;
+}
+
+.manage-product .weui-navbar__item.weui-bar__item_on {
+    border-bottom: 3px solid #ef2034;
+    background: none;
+}
+
+.manage-product .product-list .weui-panel__bd .weui-media-box a {
+    flex: 1;
+}
+
+.manage-product .product-list .weui-panel__bd .weui-media-box .weui-media-box__hd, .manage-product .product-list .weui-panel__bd .weui-media-box .weui-media-box__bd {
+    float: left;
+}
+
+.upload-product .weui-uploader__bd {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.upload-product .weui-cells_form {
+    margin-top: 0;
+}
+
+.upload-product button {
+    width: 60%;
+    display: block;
+    height: 40px;
+    background: #ef2034;
+    text-align: center;
+    margin: 20px auto;
+    line-height: 40px;
+    font-size: 18px;
+    color: #fff;
+    border-radius: 5px;
+    border: none
+}
+
+.upload-product .ui-toptips {
+    display: none;
+    width: 100%;
+    padding: 5px;
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+}
+
+.upload-product .upload-box ul li {
+    position: relative;
+}
+
+.upload-product .upload-box .reset-btn {
+    width: 20px;
+    height: 20px;
+    background: url("/images/businesses/jian-icon.png") no-repeat center;
+    position: absolute;
+    top: 0;
+    right: 0px;
+    background-size: 20px;
+    z-index: 99;
+}
+
+.upload-product .add-product-btn {
+    margin: 20px auto;
+    width: 60%;
+}
+
+/*???*/
+.return-goods .upload-img {
+    width: 30%;
+    padding: 0 1.5%;
+}
+
+.return-goods .upload-img img {
+    border: 1px dashed #ccc;
+}
+
+.return-goods .textarea {
+    line-height: 30px;
+}
+
+.return-goods .textarea .weui-cell__hd {
+    height: 100px;
+}
+
+.return-goods .textarea .weui-cell__hd .weui-label {
+    line-height: 40px;
+    vertical-align: top;
+    display: inline;
+}
+
+.return-goods .ui-steps-round > div:nth-child(1) .round {
+    background: url("/images/businesses/return-steps-1.svg") no-repeat;
+    background-size: 30px 30px;
+}
+
+.return-goods .ui-steps-round > div:nth-child(2) .round {
+    background: url("/images/businesses/steps-2.svg") no-repeat;
+    background-size: 30px 30px;
+}
+
+.return-goods .ui-steps-round > div:nth-child(3) .round {
+    background: url("/images/businesses/steps-3.svg") no-repeat;
+    background-size: 30px 30px;
+}
+
+.return-goods .ui-steps-round > div.select:nth-child(2) .round {
+    background: url("/images/businesses/steps-sel-2.svg") no-repeat;
+    background-size: 30px 30px;
+}
+
+.return-goods .ui-steps-round > div.select:nth-child(3) .round {
+    background: url("/images/businesses/steps-sel-3.svg") no-repeat;
+    background-size: 30px 30px;
+}
+
+.return-goods #returnSumbit {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.return-goods .page__desc {
+    font-size: 12px;
+    margin: 10px;
+    color: #999;
+}
+
+/*.return-goods .return-info { display: none;}*/
+.return-goods .return-info .problem {
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+}
+
+.return-goods .return-info .problem .weui-cell__bd {
+    word-wrap: break-word;
+    height: 120px;
+    overflow: hidden;
+}
+
+/*资金流水*/
+.flow-list .a-item {
+    border-top: 1px solid #e5e5e5;
+    display: block;
+    overflow: hidden;
+}
+
+.weui-cell .refund-btn {
+    background: #ffffff;
+    color: #333333;
+    font-size: 15px;
+    width: 90px;
+    height: 35px;
+    line-height: 35px;
+    border: 1px solid #999999;
+    border-radius: 5px;
+    display: block;
+    text-align: center;
+    float: right;
+}

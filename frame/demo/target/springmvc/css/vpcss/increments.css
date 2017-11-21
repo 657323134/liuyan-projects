@@ -1,0 +1,78 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    font-family: "Microsoft JhengHei";
+}
+
+header {
+    border-bottom: solid 1px #EEEEEE;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none !important;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+label {
+    position: relative;
+    display: inline-block;
+    width: 20%;
+    height: 100%;
+    font-size: 16px;
+    color: #999999;
+}
+
+.myInput {
+    position: relative;
+    margin-top: 10px;
+    margin-left: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 70%;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 5em;
+    background-color: #EEEEEE;
+}
+
+.myInput_top {
+    margin-top: 25px;
+}
+
+#myInput_number {
+    position: relative;
+    top: -1px;
+    padding-top: 0;
+    padding-bottom: 0;
+    width: 70%;
+    height: 100%;
+    line-height: 40px;
+    font-family: "Microsoft JhengHei";
+    font-size: 12px;
+    border: 0;
+    color: #999999;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-left: 10%;
+    width: 80%;
+    height: auto;
+    color: #999999;
+}
+
+#footerSpan {
+    font-size: 14px;
+}

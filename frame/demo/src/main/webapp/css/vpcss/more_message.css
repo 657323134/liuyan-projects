@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    font-family: "Microsoft JhengHei";
+}
+
+article {
+    position: relative;
+    padding-top: 10px;
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 90%;
+    height: auto;
+    font-size: 15px;
+    color: #666666;
+    border-top: solid 1px #EEEEEE;
+}
+
+p {
+    position: relative;
+    display: inline-block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 100%;
+    line-height: 25px;
+}
+
+span {
+    position: relative;
+    display: block;
+    float: left;
+    margin-right: 5%;
+    width: 30%;
+    color: #999999;
+    text-align: right;
+}
+
+b {
+    position: relative;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%;
+    width: auto;
+    max-width: 63%;
+    height: auto;
+    color: #666666;
+    word-wrap: break-word;
+    font-weight: normal;
+    background-color: #EEEEEE;
+    border-radius: 5px;
+}

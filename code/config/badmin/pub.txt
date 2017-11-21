@@ -1,0 +1,12 @@
+applicationName=b_admin
+packageDir=com.vpfinance
+resourcesPrefixJsp=badmin
+resourcesPrefixObjectForm=(default)
+resourcesPrefixObjectListForm=(default)
+resourcesBundle=(null)
+jspResultDir=/badmin
+objectName=BAdmin
+jndiName=jdbc/pstore
+tableName=b_admin
+tablename_cn=b_admin
+authorName=HuangShaoQing

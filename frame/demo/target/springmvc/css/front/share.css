@@ -1,0 +1,481 @@
+/*产品分享*/
+
+/*提示*/
+.share .tip {
+    background: #ffae12;
+    color: #fff;
+    overflow: hidden;
+}
+
+.share .tip .avator {
+    float: left;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 10px;
+}
+
+.share .avator img {
+    width: 100%;
+}
+
+.share .tip p {
+    line-height: 20px;
+    font-size: 12px;
+    margin: 5px 0;
+    height: 40px;
+    overflow: hidden;
+}
+
+.share .tip button {
+    float: right;
+    width: 50px;
+    height: 30px;
+    border: 1px solid #fff;
+    background: none;
+    margin: 10px;
+    border-radius: 3px;
+    color: #fff;
+}
+
+.share .banner {
+    width: 100%;
+}
+.share .banner .swiper-pagination-bullet {
+    width: 6px;
+    height: 6px;
+}
+.share .banner .swiper-pagination-bullet-active {
+    background: #555;
+}
+.share .banner img {
+    width: 100%;
+    display: block;
+}
+
+.share .content {
+    border-width: 1px 0 1px 0;
+    border-style: solid;
+    border-color: #ccc;
+    line-height: 30px;
+    background: #fff;
+    overflow: hidden;
+}
+
+.share .content .info {
+    width: 94%;
+    padding: 0 3%;
+}
+
+.share .content .title {
+    margin: 10px 0;
+    overflow: hidden;
+}
+
+.share .content .title strong {
+    font-size: 18px;
+    color: #ef2034;
+    width: 80%;
+}
+
+.share .content .title p {
+    font-size: 14px;
+}
+
+.share .content .title span {
+    color: #ef2034;
+}
+
+.share .content .title .open-share {
+    float: right;
+}
+.share .content .title .open-share span{
+    display: block;
+    width: 28px;
+    height: 30px;
+    margin: 0 auto;
+    background: url(/images/share.png) no-repeat -120px -386px;
+    background-size: 537px 431px;
+}
+
+.share .content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+}
+
+.share .content table td {
+    border: 1px solid #ccc;
+    padding-left: 5px;
+}
+
+.share .guarantee {
+    overflow: hidden;
+    padding: 10px;
+    background: #fafafa;
+}
+
+.share .guarantee li {
+    float: left;
+    line-height: 24px;
+    margin-right: 10px;
+    color: #999;
+}
+
+.share .guarantee li i {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url("/images/share-ico.png") no-repeat -68px -12px;
+    transform: scale(0.8);
+    float: left;
+}
+
+.share .bottom-operate a{
+    display: inline-block;
+    color: #fff;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 14px;
+}
+.share .bottom-operate{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #ffae12;
+}
+.share .bottom-operate .join-act{
+    width: 70%;
+}
+.share .bottom-operate .go-buy{
+    width: 30%;
+    float: right;
+    background: #ef2034;
+}
+
+/*弹出框*/
+.share .pop-up-box {
+    margin: 30% auto;
+    position: relative;
+}
+
+.share .pop-up-box .close-btn {
+    width: 40px;
+    height: 40px;
+    background: url(/images/share.png) no-repeat -45px -381px;
+    background-size: 537px 431px;
+    top: -30px;
+    right: 0px;
+}
+
+.share .receive-red .red-box {
+    width: 268px;
+    height: 322px;
+    background: url(/images/share.png) no-repeat 3px 0px;
+    background-size: 537px 431px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.share .receive-red .red-box .avator {
+    width: 80px;
+    height: 80px;
+    margin: 20px auto;
+    border-radius: 40px;
+}
+
+.share .receive-red .red-box p {
+    color: #fff;
+    width: 80%;
+    font-size: 16px;
+    margin: 0 auto;
+    line-height: 30px;
+}
+
+.share .red-box button, .share .red-box .btn {
+    width: 80%;
+    height: 40px;
+    font-size: 16px;
+    margin: 10px auto;
+    line-height: 40px;
+    background: #fceb54;
+    color: #ef2034;
+    text-align: center;
+    border: none;
+    display: block;
+    border-radius: 5px;
+    box-shadow: 0 3px 1px #d90d17;
+}
+
+.share .open-red .red-box {
+    width: 266px;
+    height: 368px;
+    background: url(/images/red-bg.png) no-repeat;
+    background-size: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.share .open-red .red-box strong {
+    text-align: center;
+    font-size: 40px;
+    margin: 75px auto 45px auto;
+    display: block;
+    font-weight: normal;
+    color: #d0040b;
+}
+
+.share .open-red .red-box .input-box {
+    margin: 20px auto;
+}
+/*.share .open-red .red-box .input-box input:focus {*/
+    /*background: #fff;*/
+    /*color: #d0040b;*/
+/*}*/
+
+.share .open-red .red-box .input-box .get-code{
+    display: inline-block;
+    width: 56px;
+    text-align: center;
+    background: #fff;
+    color: #d0040b;
+}
+.share .open-red .red-box .input-box input,
+.share .open-red .red-box .input-box span {
+    border: none;
+    line-height: 30px;
+    height: 30px;
+    border-radius: 3px;
+    background: #d0040b;
+    color: #fff;
+    font-size: 14px;
+    padding: 0;
+}
+
+.share .open-red .red-box .input-box button {
+    margin-top: 30px;
+}
+
+.share .open-red .red-box .input-box input#phone {
+    margin: 20px auto;
+    display: block;
+    width: 180px;
+}
+
+.share .open-red .red-box .input-box input::-webkit-input-placeholder {
+    color: #ffb3b3;
+}
+/*.share .open-red .red-box .input-box input:focus::-webkit-input-placeholder {*/
+    /*color: #d0040b;*/
+/*}*/
+
+.share .open-red .red-box .input-box .code-box {
+    margin: 10px auto;
+    width: 180px;
+}
+
+.share .open-red .red-box .input-box input#code {
+    width: 120px;
+}
+
+/*.share .open-red .red-box .input-box input.getCode {*/
+    /*width: 56px;*/
+/*}*/
+
+.share .open-red .red-box .input-box input.getCode.on {
+    background: #fff;
+    color: #ef2034;
+}
+
+.share .open-red .red-box .received {
+    display: none;
+}
+
+.share .open-red .red-box .received p {
+    width: 80%;
+    color: #fff;
+    line-height: 30px;
+    margin: 0 auto;
+    font-size: 14px;
+}
+
+/*登录弹出框*/
+
+.share .share-login .red-box {  width: 266px;  height: 368px;  background: url(/images/red-bg.png) no-repeat;  background-size: 100%;  overflow: hidden;  margin: 0 auto;  }
+.share .share-login .red-box.zero { background: url(/images/red-bg0.png) no-repeat;  background-size: 100%;}
+
+.share .share-login .red-box strong {  text-align: center;  font-size: 24px;  margin: 85px auto 45px auto;  display: block;  font-weight: normal;  color: #d0040b;  }
+
+.share .share-login .red-box .input-box {  margin: 20px auto;  }
+
+.share .share-login .red-box .input-box input#loginphone {
+    margin: 20px auto;
+    display: block;
+    width: 180px;
+}
+.share .share-login .red-box .input-box input#logincode {
+    width: 120px;
+}
+.share .share-login .red-box .input-box .get-code{  display: inline-block;  width: 56px;  text-align: center;  background: #fff;  color: #d0040b;  }
+.share .share-login .red-box .input-box input,
+.share .share-login .red-box .input-box span {  border: none;  line-height: 30px;  height: 30px;  border-radius: 3px;  background: #d0040b;  color: #fff;  font-size: 14px;  padding: 0; }
+
+.share .share-login .red-box .input-box button {  margin-top: 30px;  }
+
+.share .share-login .red-box .input-box input#phone {  margin: 20px auto;  display: block;  width: 180px;  }
+
+.share .share-login .red-box .input-box input::-webkit-input-placeholder {  color: #ffb3b3;  }
+/*.share .open-red .red-box .input-box input:focus::-webkit-input-placeholder {*/
+/*color: #d0040b;*/
+/*}*/
+
+.share .share-login .red-box .input-box .code-box {  margin: 10px auto;  width: 180px;  }
+
+.share .share-login .red-box .input-box input#code {  width: 120px;  }
+
+/*.share .open-red .red-box .input-box input.getCode {*/
+/*width: 56px;*/
+/*}*/
+
+.share .share-login .red-box .input-box input.getCode.on {  background: #fff;  color: #ef2034;  }
+
+.share .share-login .red-box .received {  display: none;  }
+
+.share .share-login .red-box .received p {  width: 80%;  color: #fff;  line-height: 30px;  margin: 0 auto;  font-size: 14px;  }
+
+
+/*分享弹框*/
+.share .share-box {
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+    margin: 0;
+    background: #fff
+}
+
+.share .share-box .title {
+    line-height: 50px;
+    height: 50px;
+    text-align: center;
+    background: #ef2034;
+    color: #fff;
+    font-size: 16px;
+}
+
+.share .share-box .title a {
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    line-height: 24px;
+    height: 24px;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    padding: 0 5px;
+}
+
+.share .share-box .intro {
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px 0;
+    border-bottom: 1px solid #e5e5e5;
+    overflow: hidden;
+}
+
+.share .share-box .intro span {
+    float: left;
+    height: 50px;
+    width: 50px;
+    margin: 15px 10px;
+    background: url(/images/share.png) no-repeat 6px -376px;
+    background-size: 537px 431px;
+}
+
+.share .share-box .intro p {
+    line-height: 20px;
+}
+
+.share .share-item {
+    width: 320px;
+    margin: 10px auto;
+}
+
+.share .share-item p {
+    text-align: center;
+    font-size: 14px;
+}
+
+.share .share-box .share-item a {
+    float: left;
+    display: block;
+    width: 46px;
+    height: 46px;
+    margin: 15px 30px;
+    background-size: 537px 431px;
+}
+
+#share-weibo {
+    background: url(/images/share.png) no-repeat -194px -380px;
+    background-size: 537px 431px;
+}
+
+#share-weixin {
+    background: url(/images/share.png) no-repeat -241px -380px;
+    background-size: 537px 431px;
+}
+
+#share-qzone {
+    background: url(/images/share.png) no-repeat -288px -380px;
+    background-size: 537px 431px;
+}
+
+#share-qq {
+    background: url(/images/share.png) no-repeat -335px -380px;
+    background-size: 537px 431px;
+}
+.share .share-tip{margin: 0 auto;}
+.product-details img{width: 100%;}
+
+.cancel-ico {
+    display: block;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background: #f5f5f5;;
+    border-radius: 3px;
+    font-size: 16px;
+    color: #000;
+}
+/*门店信息*/
+.store-list .store-info{
+    margin: 2em auto .5em auto;
+}
+.store-list .store-info .weui-loadmore__tips{
+    background-color: #f4f5f9;
+}
+.store-list ul {
+    background-color: #fff;
+}
+.store-list ul li{
+    padding: 5px 10px;
+}
+.store-list ul li:not(:last-child){
+    border-bottom: 1px solid #e5e5e5;
+}
+.store-list ul h3, .store-list ul p {
+    line-height: 30px;
+}
+.store-list ul h3 i{
+    width: 19px;
+    height: 17px;
+    background: url(/images/front/icon_mendian.png) no-repeat;
+    background-size: 19px 17px;
+    margin: 6px 6px 0 0;
+    float: left;
+}
+

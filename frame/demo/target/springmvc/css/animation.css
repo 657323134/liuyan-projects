@@ -1,0 +1,348 @@
+@charset "utf-8";
+/* CSS Document */
+
+/******详情页******/
+.graphicDetails .termBox {
+    -moz-animation: termBox 1s ease;
+    -ms-animation: termBox 1s ease;
+    -webkit-animation: termBox 1s ease;
+    animation: termBox 1s ease;
+}
+
+@keyframes termBox {
+    0% {
+        transform: translate(50px, 50px) scale(0, 0);
+    }
+    50% {
+        transform: translate(50px, 50px) scale(0, 0);
+    }
+    100% {
+        transform: translate(0px, 0px) scale(1, 1);
+    }
+}
+
+@-moz-keyframes termBox {
+    0% {
+        -moz-transform: translate(50px, 50px) scale(0, 0);
+    }
+    50% {
+        -moz-transform: translate(50px, 50px) scale(0, 0);
+    }
+    100% {
+        -moz-transform: translate(0px, 0px) scale(1, 1);
+    }
+}
+
+@-ms-keyframes termBox {
+    0% {
+        -ms-transform: translate(50px, 50px) scale(0, 0);
+    }
+    50% {
+        -ms-transform: translate(50px, 50px) scale(0, 0);
+    }
+    100% {
+        -ms-transform: translate(0px, 0px) scale(1, 1);
+    }
+}
+
+@-webkit-keyframes termBox {
+    0% {
+        -webkit-transform: translate(50px, 50px) scale(0, 0);
+    }
+    50% {
+        -webkit-transform: translate(50px, 50px) scale(0, 0);
+    }
+    100% {
+        -webkit-transform: translate(0px, 0px) scale(1, 1);
+    }
+}
+
+.graphicDetails .amountBox {
+    -moz-animation: amountBox 1.5s ease-in-out;
+    -ms-animation: amountBox 1.5s ease-in-out;
+    -webkit-animation: amountBox 1.5s ease-in-out;
+    animation: amountBox 1.5s ease-in-out;
+}
+
+@keyframes amountBox {
+    0% {
+        transform: translate(50px, -80px) scale(0, 0);
+    }
+    50% {
+        transform: translate(50px, -80px) scale(0, 0);
+    }
+    100% {
+        transform: translate(0px, 0px) scale(1, 1);
+    }
+}
+
+@-moz-keyframes amountBox {
+    0% {
+        -moz-transform: translate(50px, -80px) scale(0, 0);
+    }
+    50% {
+        -moz-transform: translate(50px, -80px) scale(0, 0);
+    }
+    100% {
+        -moz-transform: translate(0px, 0px) scale(1, 1);
+    }
+}
+
+@-ms-keyframes amountBox {
+    0% {
+        -ms-transform: translate(50px, -80px) scale(0, 0);
+    }
+    50% {
+        -ms-transform: translate(50px, -80px) scale(0, 0);
+    }
+    100% {
+        -ms-transform: translate(0px, 0px) scale(1, 1);
+    }
+}
+
+@-webkit-keyframes amountBox {
+    0% {
+        -webkit-transform: translate(50px, -80px) scale(0, 0);
+    }
+    50% {
+        -webkit-transform: translate(50px, -80px) scale(0, 0);
+    }
+    100% {
+        -webkit-transform: translate(0px, 0px) scale(1, 1);
+    }
+}
+
+.graphicDetails .mask {
+    -moz-animation: mask .5s ease;
+    -ms-animation: mask .5s ease;
+    -webkit-animation: mask .5s ease;
+    animation: mask .5s ease;
+}
+
+@keyframes mask {
+    from {
+        transform: translate(-100px, 20px) scale(0, 0);
+    }
+    to {
+        transform: translate(0px, 0px) scale(1, 1);
+    }
+}
+
+@-moz-keyframes mask {
+    from {
+        -moz-transform: translate(-100px, 20px) scale(0, 0);
+    }
+    to {
+        -moz-transform: translate(0px, 0px) scale(1, 1);
+    }
+}
+
+@-ms-keyframes mask {
+    from {
+        -ms-transform: translate(-100px, 20px) scale(0, 0);
+    }
+    to {
+        -ms-transform: translate(0px, 0px) scale(1, 1);
+    }
+}
+
+@-webkit-keyframes mask {
+    from {
+        -webkit-transform: translate(-100px, 20px) scale(0, 0);
+    }
+    to {
+        -webkit-transform: translate(0px, 0px) scale(1, 1);
+    }
+}
+
+/******注册页******/
+
+.regNext.cartoon span {
+
+    -moz-animation: regNext 1.5s ease-out;
+    -ms-animation: regNext 1.5s ease-out;
+    -webkit-animation: regNext 1.5s ease-out;
+    animation: regNext 1.5s ease-out;
+
+    -moz-animation-iteration-count: infinite;
+    -ms-animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+@keyframes regNext {
+    0% {
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translate(20px, 0px);
+    }
+}
+
+@-moz-keyframes regNext {
+    0% {
+        opacity: 1;
+        -moz-transform: translate(0px, 0px);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        -moz-transform: translate(20px, 0px);
+    }
+}
+
+@-ms-keyframes regNext {
+    0% {
+        opacity: 1;
+        -ms-transform: translate(0px, 0px);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        -ms-transform: translate(20px, 0px);
+    }
+}
+
+@-webkit-keyframes regNext {
+    0% {
+        opacity: 1;
+        -webkit-transform: translate(0px, 0px);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translate(20px, 0px);
+    }
+}
+
+/*.regbox ul .on{
+	
+	-moz-animation:regTab .3s ease-in;
+	-ms-animation:regTab .3s ease-in;
+	-webkit-animation:regTab .3s ease-in;
+	animation:regTab .3s ease-in ;
+	}
+
+
+@keyframes regTab 
+{
+from {
+	 opacity:0;
+	 transform:scale(0,0);
+	 }
+to { opacity:1;
+	 transform:scale(1,1);
+	 }
+}
+@-moz-keyframes regTab 
+{
+from {
+	 opacity:0;
+	-moz-transform:scale(0,0);
+	 }
+to { opacity:1;
+		-moz-transform: scale(1,1);
+	 }
+}
+@-ms-keyframes regTab 
+{
+from {
+	 opacity:0;
+     -ms-transform:scale(0,0);
+	 }
+to { opacity:1;
+-ms-transform: scale(1,1);
+	 }
+}
+
+@-webkit-keyframes regTab 
+{
+from {
+	 opacity:0;
+	 -webkit-transform:scale(0,0);
+	 }
+to { opacity:1;
+	 -webkit-transform: scale(1,1);
+	 }
+}*/
+
+.regbox ul .stop .circleRegBox i, .regbox ul .stop, .regbox ul .stop .text {
+
+    -moz-animation: circleReg 1s linear;
+    -ms-animation: circleReg 1s linear;
+    -webkit-animation: circleReg 1s linear;
+    animation: circleReg 1s linear;
+}
+
+.regbox ul .stop .circleRegBox .circle07 {
+    -moz-animation-duration: 1.5s;
+    -ms-animation-duration: 1.5s;
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+}
+
+.regbox ul .stop .regbox ul li .text {
+    -moz-animation-duration: 2s;
+    -ms-animation-duration: 2s;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+}
+
+@keyframes circleReg {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes circleReg {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes circleReg {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes circleReg {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

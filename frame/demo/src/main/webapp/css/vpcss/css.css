@@ -1,0 +1,626 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    min-width: 320px;
+    padding: 0px;
+    margin: 0px;
+}
+
+body, p, h1, h2, h3, h4, h5, ul, li, dl, dd, dt, span, input {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+.mt10 {
+    margin-top: 10px;
+}
+
+.mt20 {
+    margin-top: 20px;
+}
+
+.mt30 {
+    margin-top: 30px;
+}
+
+.mt50 {
+    margin-top: 50px;
+}
+
+.clear {
+    clear: both;
+}
+
+.red {
+    color: #e51c23;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none !important;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.blur {
+    -webkit-filter: blur(10px);
+    -moz-filter: blur(10px);
+    -ms-filter: blur(10px);
+    filter: blur(10px);
+}
+
+header {
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    background: #ffffff;
+}
+
+header .back {
+    display: block;
+    position: absolute;
+    top: 11px;
+    left: 10px;
+    width: 16px;
+    height: 30px;
+    background: url(../../images/img/back.png) no-repeat;
+    background-size: 12px auto;
+    -webkit-babackground-size: 12px auto;
+}
+
+header .tit {
+    font-size: 18px;
+    display: inline-block;
+    margin: 0 auto;
+    font-family: "Microsoft JhengHei";
+}
+
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+    background: #1c69a1;
+    padding-bottom: 20px;
+
+    background: -moz-linear-gradient(left bottom, rgb(45, 200, 230), rgb(10, 65, 150));
+    background: -o-linear-gradient(left bottom, rgb(45, 200, 230), rgb(10, 65, 150));
+    background: -webkit-linear-gradient(left bottom, rgb(45, 200, 230), rgb(10, 65, 150));
+}
+
+.infotop {
+    padding: 5% 0 0 5%;
+}
+
+.percentage {
+    color: #ffffff;
+    font-size: 98px;
+    text-align: center;
+}
+
+.yearProfit {
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.amount {
+    color: #ffffff;
+    font-size: 16px;
+    padding: 0 0 0 5%;
+    overflow: hidden;
+}
+
+.amount span {
+    color: #96e1f0;
+    font-size: 14px;
+}
+
+.timeLimit {
+    border: 1px solid #ffffff;
+    padding: 2px 5px;
+    margin-right: 5%;
+    display: inline-block;
+    float: right;
+    color: #ffffff;
+    font-size: 14px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+}
+
+.detailsShow {
+    float: left;
+    width: 40%;
+    height: 35px;
+    line-height: 35px;
+    margin-left: 6%;
+    border: 1px solid #b3b3b3;
+    text-align: center;
+    margin-right: 5%;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    background: url(../../images/img/cp_03.png) no-repeat 10px center;
+    background-origin: content-box;
+    background-size: 24px auto;
+    -webkit-background-size: 24px auto;
+}
+
+.contractShow {
+    float: right;
+    width: 40%;
+    height: 35px;
+    line-height: 35px;
+    margin-right: 6%;
+    border: 1px solid #b3b3b3;
+    text-align: center;
+    margin-right: 5%;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    background: url(../../images/img/xy_05.png) no-repeat 10px center;
+    background-origin: content-box;
+    background-size: 24px auto;
+    -webkit-background-size: 24px auto;
+}
+
+.textBox {
+    float: left;
+    height: 40px;
+    background: #eeeeee;
+    border: none;
+    font-size: 14px;
+    width: 65%;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 0 6% 0 6%;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+}
+
+.textBox::-webkit-input-placeholder {
+    color: #999999;
+}
+
+.textBox::-moz-placeholder {
+    color: #999999;
+}
+
+.calculator {
+    margin-top: 5px;
+    margin-right: 6%;
+    float: right;
+    width: 22px;
+    height: 33px;
+    background: url(../../images/img/calculator.png) no-repeat;
+    background-size: 22px auto;
+    -webkit-background-size: 22px auto;
+}
+
+.btnBox {
+    height: 40px;
+    width: 40%;
+    height: 40px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+    border: none;
+    color: #ffffff;
+    font-size: 16px;
+    background: #e51c23;
+}
+
+.agreement {
+    color: #999999;
+    margin-left: 5%;
+    font-size: 13px;
+}
+
+.agreement span {
+    text-decoration: underline;
+}
+
+/* checkbox */
+.agreement input[type=checkbox] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    margin: 0;
+    cursor: pointer;
+    vertical-align: bottom;
+    background: transparent;
+    border: 1px solid #e51c23;
+    margin-right: 10px;
+
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.agreement input[type=checkbox]:active {
+    border-color: #e51c23;
+}
+
+.agreement input[type=checkbox]:hover {
+    border-color: #e51c23;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.agreement input[type=checkbox]:checked {
+
+    border-color: #e51c23;
+}
+
+.agreement input[type=checkbox]:checked::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    top: 3px;
+    left: 3px;
+    background: #e51c23;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+}
+
+.agreement input[type=checkbox]:focus {
+    outline: none;
+    border-color: #e51c23;
+}
+
+.bt {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+}
+
+/* end radio */
+
+.detailsMore {
+    width: 100%;
+    background: #ffffff;
+    position: fixed;
+    opacity: 0;
+    top: 0px;
+    left: 100%;
+    right: 0px;
+    bottom: 0px;
+    -webkit-transition: all .1s ease-out;
+    transition: all .1s ease-out;
+}
+
+.detailsMore .cont {
+    height: 100%;
+    overflow-y: auto;
+    border-top: 1px solid #cccccc;
+    padding: 0 5%;
+}
+
+.detailsMore .cont dl {
+    padding-top: 10px;
+    overflow: hidden;
+}
+
+.detailsMore .cont dl dt {
+    width: 35%;
+    float: left;
+    line-height: 150%;
+    color: #999999;
+}
+
+.detailsMore .cont dl dd {
+    width: 61%;
+    float: left;
+    line-height: 150%;
+    color: #999999;
+    display: block;
+    padding: 0 2%;
+    min-width: 50%;
+    color: #999999;
+    background-color: #eeeeee;
+    border-radius: 5px;
+}
+
+.detailsMore.show {
+    left: 0px;
+    opacity: 1;
+}
+
+.contractBox {
+    width: 100%;
+    background: #ffffff;
+    position: fixed;
+    opacity: 0;
+    top: 0px;
+    left: 100%;
+    right: 0px;
+    bottom: 0px;
+    -webkit-transition: all .1s ease-out;
+    transition: all .1s ease-out;
+}
+
+.contractBox .title {
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.contractBox .cont {
+    height: 100%;
+    overflow-y: auto;
+    border-top: 1px solid #cccccc;
+    padding: 0 5%;
+}
+
+.contractBox .cont dl {
+    padding-top: 10px;
+    overflow: hidden;
+}
+
+.contractBox .cont dl dt {
+    width: 15%;
+    float: left;
+    line-height: 150%;
+    padding: 5px 0px;
+    color: #999999;
+    display: block;
+}
+
+.contractBox .cont dl dd {
+    width: 81%;
+    float: left;
+    line-height: 150%;
+    color: #999999;
+    display: block;
+    padding: 5px 2%;
+    min-width: 50%;
+    color: #999999;
+    background-color: #eeeeee;
+    border-radius: 5px;
+}
+
+.contractBox .cont dl .text {
+    background: #ffffff;
+}
+
+.contractBox.show {
+    left: 0px;
+    opacity: 1;
+}
+
+/*弹出计算器**/
+.popDivBg {
+    display: none;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    width: 100%;
+    z-index: 99;
+    background: #dcdcdc; /*background:rgba(0,0,0,0.8);*/
+}
+
+.popDiv {
+    /*visibility:hidden;*/
+    margin: -140px 10% 0 10%;
+    padding: 5%;
+    position: absolute;
+    z-index: 99;
+    top: 50%;
+    background: #ffffff;
+    border-radius: 2px;
+    width: 70%;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    -webkit-transform: scale(0, 0);
+    transform: scale(0, 0);
+    opacity: 0;
+}
+
+.popDiv .close {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 15px;
+    height: 15px;
+    background: url(../../images/img/close_03.png) no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+}
+
+.popDiv h2 {
+    text-align: center;
+    padding: 0px 0;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+.textBox2 {
+    height: 45px;
+    background: #eeeeee;
+    text-align: left;
+    border: none;
+    font-size: 14px;
+    width: 95%;
+    padding-left: 5%;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+.principal {
+    height: 45px;
+    padding-left: 20%;
+    background: url(../../images/img/icon_07.png) no-repeat left center;
+    background-size: 35px auto;
+    -webkit-background-size: 35px auto;
+}
+
+.limit {
+    height: 45px;
+    line-height: 45px;
+    color: #666666;
+    font-size: 16px;
+    padding: 10px 0 0px 20%;
+    background: url(../../images/img/icon_10.png) no-repeat left center;
+    background-size: 35px auto;
+    -webkit-background-size: 35px auto;
+}
+
+.profit {
+    height: 45px;
+    line-height: 45px;
+    color: #666666;
+    padding: 10px 0 0px 20%;
+    font-size: 16px;
+    background: url(../../images/img/icon_14.png) no-repeat left center;
+    background-size: 35px auto;
+    -webkit-background-size: 35px auto;
+}
+
+.popDiv.show, .popDiv2.show {
+    /*visibility:visible;*/
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+    opacity: 1;
+    display: block;
+}
+
+.textBox2::-webkit-input-placeholder {
+    color: #666666;
+}
+
+.textBox2::-moz-placeholder {
+    color: #666666;
+}
+
+.popDiv2 {
+    /*visibility:hidden;*/
+    margin: -80px 10% 0 10%;
+    text-align: center;
+    padding: 5%;
+    position: absolute;
+    z-index: 99;
+    top: 50%;
+    background: #ffffff;
+    border-radius: 2px;
+    width: 70%;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    -webkit-transform: scale(0, 0);
+    transform: scale(0, 0);
+    opacity: 0;
+}
+
+.popDiv2 .close2 {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 15px;
+    height: 15px;
+    background: url(../../images/img/close_03.png) no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+}
+
+/*充值*/
+
+.recharge {
+    background: #ffffff;
+    border-top: 1px solid #cccccc;
+    padding: 0 8%;
+}
+
+.rechargeAmount {
+    position: relative;
+}
+
+.rechargeAmount label {
+    position: absolute;
+    font-size: 16px;
+    color: #999999;
+    top: 12px;
+    left: 10px;
+}
+
+.textRecharge {
+    width: 60%;
+    padding: 0 20%;
+    color: #999999;
+    height: 40px;
+    font-size: 14px;
+    border: 1px solid #cccccc;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    text-align: left;
+}
+
+.balance {
+    text-align: right;
+    color: #666666;
+}
+
+.payDiv {
+    width: 100%;
+    background: url(../../images/img/zfty_03.png) no-repeat 10px center;
+    background-size: auto 25px;
+    -webkit-background-size: auto 25px;
+    color: #999999;
+    line-height: 40px;
+    height: 40px;
+    border: 1px solid #cccccc;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    text-align: center;
+}
+
+.btnRecharge {
+    height: 40px;
+    width: 40%;
+    height: 40px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+    border: none;
+    color: #ffffff;
+    font-size: 16px;
+    background: #e51c23;
+}
+
+.rechargeTips {
+    padding: 0 8%;
+    line-height: 200%;
+    color: #999999;
+}
+
+.rechargeTips h3 {
+    color: #999999;
+    font-weight: normal;
+}
+
+.rechargeTips p {
+    padding-left: 30px;
+    font-size: 14px;
+}
+
+
+

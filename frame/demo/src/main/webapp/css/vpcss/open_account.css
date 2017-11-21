@@ -1,0 +1,105 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    font-family: "Microsoft JhengHei";
+}
+
+section {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+img {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+p {
+    position: relative;
+    text-align: center;
+    color: #999999;
+}
+
+button {
+    position: relative;
+    margin-top: 20px;
+    margin-left: 30%;
+    margin-right: 30%;
+    width: 40%;
+    height: 40px;
+    font-size: 18px;
+    color: #FFFFFF;
+    font-family: "Microsoft JhengHei";
+    background-color: #E51C23;
+    border: 0;
+    border-radius: 5em;
+}
+
+span {
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    font-size: 13px;
+    color: #999999;
+    text-align: center;
+}
+
+aside {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.successBox {
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    margin-left: 10%;
+    margin-top: 30%;
+    width: 80%;
+    height: auto;
+}
+
+.successBox img {
+    width: 100%;
+}
+
+.successBox .text {
+    position: absolute;
+    color: #ffffff;
+    text-align: center;
+    bottom: 25%;
+    display: inline-block;
+    margin: 0 auto;
+    left: 0px;
+    right: 0px;
+}
+
+.successBtn {
+    position: absolute;
+    bottom: 6%;
+    margin: 0 auto;
+    display: inline-block;
+    width: 35%;
+    height: 35px;
+    left: 0px;
+    right: 0px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    font-size: 16px;
+    background: transparent;
+}

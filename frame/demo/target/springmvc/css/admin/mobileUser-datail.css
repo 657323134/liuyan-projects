@@ -1,0 +1,50 @@
+@media (max-width: 767px){
+    body {
+         padding-right: 15px;
+         padding-left: 15px;
+    }
+}
+.table-bordered {
+    border: none;
+}
+
+/*基本信息*/
+.detail .detail-container {
+    margin-top: 10px;
+    border: 1px solid #ccc;
+}
+.detail .container-title {
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+}
+
+.detail .data-ift {
+    font-size: 16px;
+    text-align: center;
+    font-weight: 700;
+    height: 18px;
+    line-height: 18px;
+}
+.detail-content {
+    width: 100%;
+    padding: 3%;
+}
+.content-rig {
+    position: relative;
+}
+.content-pos {
+    position: absolute;
+    top: 0;
+    left: 50%;
+}
+/*.data-rtn {*/
+    /*position: fixed;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    /*width : 100%;*/
+    /*height: 40px;*/
+    /*line-height: 40px;*/
+    /*background: #fff;*/
+    /*text-align: center;*/
+    /*border-bottom: 1px solid #ccc;*/
+/*}*/

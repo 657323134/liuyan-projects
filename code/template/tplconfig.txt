@@ -1,0 +1,14 @@
+#模板路径,目标文件上目录,目标文件名,目标文件目录
+src/Bean.tpl,,.java,src
+src/Search.tpl,,Search.java,src
+src/Dao.tpl,,Dao.java,src
+src/Service.tpl,,Service.java,src
+src/Mapper.tpl,,Mapper.xml,src
+src/Controller.tpl,,Controller.java,src
+#
+jsp/add.tpl,,add.jsp,jsp
+jsp/edit.tpl,,edit.jsp,jsp
+jsp/search.tpl,,search.jsp,jsp
+#
+config/config.tpl,,config.xml,config
+config/Applicationresources.tpl,,Applicationresources.properties,config

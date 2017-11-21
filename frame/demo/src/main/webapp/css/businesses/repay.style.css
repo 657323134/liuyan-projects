@@ -1,0 +1,805 @@
+/**/
+
+/*����ҳ����ʽ*/
+body {
+    font-family: PingFangSC-Regular, Helvetica, "Droid Sans", Arial, sans-serif;
+    background: #f0f0f0;
+}
+
+.ui-btn_primary {
+    background: #1da0ff;
+}
+
+header {
+    width: 94%;
+    height: 44px;
+    line-height: 44px;
+    padding: 0 3%;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #ccc;
+}
+
+header .back-btn {
+    display: block;
+    width: 23px;
+    height: 44px;
+    background: url("/images/businesses/back-icon.png") no-repeat center;
+    background-size: 23px;
+}
+
+header .title {
+    font-size: 20px;
+    color: #666;
+}
+
+header .header-right {
+    height: 44px;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+/*��¼*/
+.html-100 {
+    height: 100%;
+}
+
+.repay-login {
+    background: url("/images/businesses/running-car.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+
+.repay-login .page__bd {
+    width: 90%;
+    margin: 18% auto 0 auto;
+}
+
+.repay-login .login-panel {
+    background: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.repay-login .page__bd .page__title {
+    text-align: center;
+    margin: 30px auto;
+    color: #fff;
+}
+
+.repay-login .login-panel .weui-label {
+    width: 60px;
+}
+
+.repay-login #loginBtn {
+    width: 40%;
+    margin: 30px auto 10px auto;
+}
+
+.repay-login .weui-cells {
+    margin: 0;
+}
+
+.repay-login .weui-cell:not(:last-child) {
+    padding: 20px 15px;
+}
+
+.repay-login .weui-cell.login-type {
+    display: none;
+}
+
+.repay-login .forget-password {
+    display: block;
+    text-align: center;
+}
+
+.repay-login .weui-cell.flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.repay-login .weui-footer {
+    position: absolute;
+    bottom: 0;
+    line-height: 30px;
+    text-align: center;
+    width: 100%;
+}
+
+/*��ҳ*/
+.repay-index #headerMain {
+    position: relative;
+    width: 100%;
+    height: 210px;
+    text-align: center;
+    background: #1da0ff;
+}
+
+.repay-index #headerMain > a {
+    position: absolute;
+    top: 10px;
+    display: block;
+    width: 30px;
+    height: 30px;
+}
+
+.repay-index #headerMain > a img {
+    width: 100%;
+}
+
+.repay-index #headerMain > a.setting {
+    right: 10px;
+}
+
+.repay-index #headerMain_portrait {
+    position: relative;
+    display: inline-block;
+    z-index: 2;
+    margin-top: 55px;
+    width: 70px;
+    height: 70px;
+}
+
+.repay-index #headerMain_portrait img:nth-child(1) {
+    width: 100%;
+    border-radius: 5em;
+}
+
+.repay-index #headerMain p {
+    margin: 10px 0;
+    color: #fff;
+}
+
+.repay-index .last-order-title {
+    margin: 1.8em auto 0em auto;
+}
+
+.repay-index .last-order-title .weui-loadmore__tips {
+    background: #f0f0f0;
+    color: #666;
+}
+
+/*��ҳ�Ͷ������鹫����ʽ*/
+.order-list {
+    margin-bottom: 15px;
+}
+
+.order-list .weui-form-preview__hd {
+    padding: 0 15px;
+}
+
+.order-list .weui-form-preview__label {
+    color: #333;
+    font-size: 12px;
+}
+
+.order-list .weui-form-preview__hd .weui-form-preview__value {
+    font-size: 0.6em;
+}
+
+.order-list .weui-form-preview__hd em.weui-form-preview__value:after {
+    content: " ";
+    display: inline-block;
+    height: 6px;
+    width: 6px;
+    border-width: 2px 2px 0 0;
+    border-color: #C8C8CD;
+    border-style: solid;
+    -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+    transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+    position: relative;
+    top: -2px;
+    position: absolute;
+    top: 50%;
+    right: 7px;
+    margin-top: -4px;
+}
+
+.order-list .weui-form-preview__bd .weui-form-preview__item {
+    margin-bottom: 15px;
+}
+
+.order-list span.weui-form-preview__value {
+    line-height: 20px;
+}
+
+.order-list .weui-form-preview__ft .weui-btn_mini {
+    margin: 10px 20px;
+}
+
+.order-list .weui-form-preview__ft .total-info {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.order-list .weui-form-preview__ft .total-info i, .order-list .weui-form-preview__ft .total-info strong {
+    color: #f47c2c;
+}
+
+.all-order {
+    display: block;
+    text-align: center;
+    line-height: 30px;
+    margin: 10px auto;
+    color: #666
+}
+
+.repay-index .repay-order {
+    margin-bottom: 50px;
+}
+
+.repay-index .weui-form-preview {
+    overflow: hidden;
+}
+
+.repay-index .repay-by-stages {
+    width: 90%;
+    margin: 20px auto;
+    background: #f8f8f8;
+    border-radius: 3px;
+    position: relative;
+}
+
+.repay-index .repay-by-stages:before {
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #f8f8f8;
+}
+
+.repay-index .repay-by-stages tr td {
+    width: 20%;
+    line-height: 30px;
+}
+
+.repay-index .repay-by-stages tr td:first-child {
+    width: 10%;
+}
+
+.repay-index .repay-by-stages tr td:nth-child(2) {
+    width: 30%;
+}
+
+.repay-index .repay-by-stages tr td .weui-cells_checkbox {
+    display: none;
+}
+
+.repay-index .weui-check {
+    opacity: 0;
+    left: 0;
+    left: 23px;
+    width: 25px;
+    height: 25px;
+}
+
+.repay-index #iRepay {
+    width: 80%;
+}
+
+.repay-index .no-order-tip {
+    text-align: center;
+    margin: 70px auto;
+    display: none;
+}
+
+.settlement {
+    display: none;
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background: #fff;
+}
+
+.settlement .all-select {
+    display: inline-block;
+    background-size: 24px 24px;
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+.settlement .all-num {
+    color: #ff194a;
+    font-size: 14px;
+}
+
+.settlement .all-select .weui-cells_checkbox {
+    display: inline-block
+}
+
+.settlement a {
+    display: block;
+    float: right;
+    width: 30%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: #ff194a;
+    color: #fff;
+}
+
+/*��Ӷ���*/
+.add-order .add-product1 {
+    margin-top: 50px;
+}
+
+.add-order .add-product2 {
+    display: none;
+}
+
+.add-order .add-product2 .weui-cells__title span {
+    float: right;
+    font-size: 14px;
+    color: #999;
+}
+
+.add-order .weui-cells__title {
+    font-size: 18px;
+    color: #333333;
+    line-height: 30px;
+}
+
+.add-order .add-product-btn {
+    text-align: center;
+    margin: 10px auto;
+    padding-left: 20px;
+    width: 80px;
+    height: 20px;
+    background: url("/images/businesses/add-pro.svg") no-repeat;
+    -webkit-background-size: 20px 20px;
+    background-size: 20px 20px;
+}
+
+.add-order #createCode {
+    border-radius: 0;
+    margin-top: 20px
+}
+
+.add-order .pop-up {
+    display: none;
+}
+
+.add-order .pop-up .weui-dialog__hd {
+    position: relative;
+}
+
+.add-order .pop-up .weui-dialog__hd .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+}
+
+.add-order #qrCode .code-img {
+    width: 100%;
+}
+
+.add-order #qrCode .weui-dialog__ft {
+    text-align: center;
+    display: block;
+    font-size: 14px;
+    color: #999;
+}
+
+/*������¼*/
+.order-record .weui-tab__panel .order-list:last-child {
+    display: none;
+}
+
+.order-record .weui-tab {
+    background: #fff;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.order-record .page__bd .page__title {
+    text-align: center;
+    margin: 30px auto;
+    color: #fff;
+}
+
+.order-record .weui-navbar__item.weui-bar__item_on {
+    border-bottom: 3px solid #1da0ff;
+    background: none;
+}
+
+/*��������*/
+/*������*/
+.steps-bar {
+    background: #fff;
+    overflow: hidden;
+}
+
+.ui-steps-round {
+    font-size: 0px;
+    line-height: 0px;
+    margin: 18px 8%;
+}
+
+.ui-steps-round > div {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+}
+
+.ui-steps-round > div .wrap:before,
+.ui-steps-round > div .wrap:after {
+    display: table;
+    content: "";
+    line-height: 0;
+}
+
+.ui-steps-round > div .wrap:after {
+    clear: both;
+}
+
+.ui-steps-round > div > label {
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 12px;
+    line-height: 12px;
+    height: 12px;
+    margin-top: 6px;
+    color: #999;
+    cursor: default;
+    text-align: center;
+    margin-left: -25px;
+    position: relative;
+    left: 15px;
+}
+
+.ui-steps-round > div.select > label {
+    color: #28a3ef;
+}
+
+.ui-steps-round > div:first-child > label {
+    width: auto;
+    max-width: 50%;
+    margin-left: 0;
+    left: -8px;
+}
+
+.ui-steps-round > div:last-child,
+.ui-steps-round > div.last {
+    width: 30px !important;
+}
+
+.ui-steps-round > div:last-child > label,
+.ui-steps-round > div.last > label {
+    position: absolute;
+    width: auto;
+    margin-left: 0;
+    left: auto;
+    right: 18px;
+}
+
+.ui-steps-round > div .round {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 12px;
+    color: #FFF;
+    line-height: 22px;
+    text-align: center;
+    float: left;
+}
+
+.ui-steps-round > div .bar {
+    margin: 15px 10px 0px 40px;
+    width: 200px;
+    height: 4px;
+    vertical-align: middle;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    background: #eee;
+}
+
+/*.ui-steps-round > .finished .round { border: 4px #28a3ef solid; background-color: #28a3ef; color: #ffffff; }*/
+.ui-steps-round > .finished .bar {
+    background-color: #28a3ef;
+}
+
+/*.ui-steps-round > .current .round { border: 4px #4cb9fc solid; background-color: #4cb9fc; }*/
+.ui-steps-round > div:nth-child(1) .round {
+    background: url("/images/businesses/steps-1.svg") no-repeat;
+    background-size: 30px 30px;
+}
+
+.ui-steps-round > div:nth-child(2) .round {
+    background: url("/images/businesses/steps-2.svg") no-repeat;
+    background-size: 30px 30px;
+}
+
+.ui-steps-round > div:nth-child(3) .round {
+    background: url("/images/businesses/steps-3.svg") no-repeat;
+    background-size: 30px 30px;
+}
+
+.ui-steps-round > div:nth-child(4) .round {
+    background: url("/images/businesses/steps-4.svg") no-repeat;
+    background-size: 30px 30px;
+}
+
+.ui-steps-round > div.select:nth-child(2) .round {
+    background: url("/images/businesses/steps-sel-2.svg") no-repeat;
+    background-size: 30px 30px;
+}
+
+.ui-steps-round > div.select:nth-child(3) .round {
+    background: url("/images/businesses/steps-sel-3.svg") no-repeat;
+    background-size: 30px 30px;
+}
+
+.ui-steps-round > div.select:nth-child(4) .round {
+    background: url("/images/businesses/steps-sel-4.svg") no-repeat;
+    background-size: 30px 30px;
+}
+
+.ui-steps-round > .current .bar {
+    background-color: #4cb9fc;
+}
+
+.ui-steps-round > .todo > label {
+    color: #999999;
+}
+
+/*.ui-steps-round > .todo .round { border: 4px #d3d3d3 solid; background-color: #FFF; color: #999999; }*/
+.ui-steps-round > .todo .bar {
+    background-color: #eeeeee;
+}
+
+.steps-round-auto {
+    display: table;
+    width: 90%;
+}
+
+.steps-round-auto > div {
+    display: table-cell;
+}
+
+.steps-round-auto > div .bar {
+    width: auto;
+}
+
+.steps-3 > div {
+    width: 50%;
+}
+
+.steps-4 > div {
+    width: 33%;
+}
+
+.steps-5 > div {
+    width: 25%;
+}
+
+.steps-6 > div {
+    width: 20%;
+}
+
+.steps-7 > div {
+    width: 16%;
+}
+
+.upload-img {
+    width: 96%;
+    padding: 0 3% 0 2%;
+    position: relative;
+    float: left;
+}
+
+.upload-img img {
+    width: 100%;
+    height: 130px;
+    margin-top: 10px;
+    border: 2px dashed #ccc;
+}
+
+.upload-img .img-box #alttext-container {
+    border-width: 0px;
+!important
+}
+
+.upload-img input[type="file"] {
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    position: absolute;
+    left: 50%;
+    top: 45px;
+    margin: 0 0 0 -40px;
+    opacity: 0;
+    -webkit-appearance: none;
+    z-index: 10;
+}
+
+.upload-img .upload-btn {
+    width: 50px;
+    height: 50px;
+    line-height: 30px;
+    position: absolute;
+    left: 50%;
+    top: 45px;
+    margin: 0 0 0 -25px;
+    color: #f47c2c;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 6px;
+    background: url("../img/photo.svg") no-repeat;
+    -webkit-background-size: 50px 50px;
+    background-size: 50px 50px;
+}
+
+.upload-img .upload-name {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 12px;
+    color: #666
+}
+
+.upload-img .reset-btn {
+    width: 20px;
+    height: 20px;
+    background: url("/images/businesses/jian-icon.png") no-repeat center;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    background-size: 20px;
+    z-index: 99;
+    display: none;
+}
+
+/*����Ա��*/
+.manage-staff .weui-flex {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 60px auto;
+}
+
+.manage-staff .weui-flex__item {
+    width: 45%;
+    background: #fff;
+    margin-bottom: 20px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.manage-staff .weui-flex__item:last-child {
+    -webkit-box-flex: none;
+    -webkit-flex: none;
+    flex: none;
+}
+
+.manage-staff .weui-flex__item:nth-child(2n+1) {
+    margin-right: 10%;
+}
+
+.manage-staff .weui-flex__item .avator-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 20px auto;
+}
+
+.manage-staff .weui-flex__item .avator-img img {
+    width: 100%
+}
+
+.manage-staff .weui-flex__item h3, .manage-staff .weui-flex__item h4 {
+    text-align: center;
+    line-height: 30px;
+}
+
+.manage-staff .weui-flex__item h4 {
+    color: #10aeff;
+}
+
+.manage-staff .weui-flex__item .add-staff-btn {
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    color: #ccc;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    margin: 40px auto;
+    font-size: 60px;
+    text-align: center;
+}
+
+/*�鿴Ա��*/
+.view-staff .weui-flex {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.view-staff .weui-flex .weui-flex__item {
+    margin: 0 20px;
+}
+
+/*��ӡ��޸�Ա��*/
+.modify-staff .weui-btn {
+    margin: 20px;
+}
+
+/*�ҵ�����*/
+.my-income .my-money {
+    background: #fff;
+}
+
+.my-income .my-money .money-num {
+    text-align: center;
+    line-height: 60px;
+}
+
+.my-income .my-money .money-num strong {
+    color: #ee3c43;
+    font-size: 24px;
+    margin-right: 10px
+}
+
+/*�������п�*/
+.repay-manage-card .card-show {
+    position: relative;
+    width: 80%;
+    margin: 70px auto 10px auto;
+}
+
+.repay-manage-card .card-show h2, .repay-manage-card .card-show p {
+    position: absolute;
+    left: 20px;
+    color: #fff;
+}
+
+.repay-manage-card .card-show h2 {
+    top: 5%;
+}
+
+.repay-manage-card .card-show p {
+    top: 60%;
+}
+
+.repay-manage-card .card-show a {
+    position: absolute;
+    right: 10%;
+    top: 60%;
+    color: #fff;
+}
+
+.repay-manage-card .card-show img {
+    width: 100%;
+    height: auto;
+}
+
+.repay-manage-card .page__desc {
+    font-size: 12px;
+    margin: 10px;
+    color: #999;
+}
+
+
+

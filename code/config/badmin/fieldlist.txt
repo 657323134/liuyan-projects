@@ -1,0 +1,5 @@
+id,id,bigint,ID,bigint,pk,r,null,20
+adminName,adminName,String,帐户名,varchar,npk,nr,null,20
+pwd,pwd,String,密码,varchar,npk,nr,null,32
+createTime,createTime,datetime,创建时间,datetime,npk,nr,null,0
+isEnable,isEnable,int,是否禁用,INT,npk,nr,null,1

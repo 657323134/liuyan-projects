@@ -1,0 +1,1 @@
+native2ascii -encoding UTF-8 message_zh_CN_SRC.properties message_zh_CN.properties
