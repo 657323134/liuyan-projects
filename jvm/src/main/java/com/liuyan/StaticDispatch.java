@@ -1,3 +1,5 @@
+package com.liuyan;
+
 /**
  * @Author: ly
  * @Description: 方法静态分派演示

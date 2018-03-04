@@ -1,3 +1,5 @@
+package com.liuyan;
+
 import java.util.List;
 
 /**
@@ -45,10 +47,6 @@ public class FinalizeEscapeGC {
         }
     }
 
-    public String test(List<String> list) {
-
-        return "";
-    }
 
     public int test(List<Integer> list) {
         return 1;
