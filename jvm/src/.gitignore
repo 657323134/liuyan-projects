@@ -1,0 +1,12 @@
+jvm.iml
+.idea/compiler.xml
+.idea/findbugs-idea.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/workspace.xml
+.idea/artifacts/xicar_war_exploded.xml
+.idea/copyright/profiles_settings.xml
+.idea/libraries/lib.xml
+.idea/libraries/Spring_4_2_6_RELEASE.xml
+out
+.idea
