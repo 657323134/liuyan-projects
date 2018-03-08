@@ -30,4 +30,5 @@ public class BookFacadeProxy implements InvocationHandler{
         System.out.println("事物结束");
         return result;
     }
+
 }

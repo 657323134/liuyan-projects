@@ -14,25 +14,31 @@ import java.io.IOException;
  * Created by liuyan on 2018/3/4.
  */
 public class TestProxy {
-    private static String outputFile = "D:\\Temp\\out";
+    private static String outputFile = "c:/Temp/out";
     static {
         System.setProperty(DebuggingClassWriter.DEBUG_LOCATION_PROPERTY,outputFile);
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         TestProxy testProxy = new TestProxy();
+        // cglib动态代理
         BookFacadeImpl bookProxy = testProxy.cglibProxyClient();
-        bookProxy.addBook();
+
+        // jdk 代理
+//        BookFacade bookProxy = testProxy.jdkProxyClient();
+//        bookProxy.addBook();
+//        jdkToFile(bookProxy);
+        testProxy.testSerail();
     }
 
     public void testSerail() throws IOException {
         BookFacadeImpl obj = new BookFacadeImpl();
         toFile(obj);
     }
-    public void jdkProxyClient() {
+    public BookFacade jdkProxyClient() {
         BookFacadeProxy proxy = new BookFacadeProxy();
         BookFacade bookProxy = (BookFacade) proxy.bind(new BookFacadeImpl());
-        bookProxy.addBook();
+        return bookProxy;
     }
 
     public BookFacadeImpl cglibProxyClient() {
