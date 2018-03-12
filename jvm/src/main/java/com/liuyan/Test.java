@@ -1,5 +1,8 @@
 package com.liuyan;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
 /**
  * @Author: ly
  * @Description:
@@ -7,10 +10,8 @@ package com.liuyan;
  */
 public class Test {
     public static void main(String[] args) {
-        {
-            byte[] placeholder = new byte[64*1024*1024];
-        }
-        int a=0;
-        System.gc();
+       double a = 334.00000000002d;
+       double b = new BigDecimal(String.valueOf(a)).setScale(2, RoundingMode.HALF_UP).doubleValue();
+        System.out.println(b);
     }
 }
