@@ -17,6 +17,7 @@ package com.alibaba.dubbo.demo.consumer;
 
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.alibaba.dubbo.demo.bid.*;
+import com.alibaba.dubbo.demo.service.DemoService;
 import com.alibaba.dubbo.demo.user.User;
 import com.alibaba.dubbo.demo.user.facade.AnotherUserRestService;
 import org.springframework.stereotype.Component;
@@ -36,6 +37,8 @@ public class DemoJavaConfigAction {
 
     @Reference
     private AnotherUserRestService anotherUserRestService;
+    @Reference
+    private DemoService demoService;
 
     @PostConstruct
     public void start() throws Exception {
@@ -83,5 +86,7 @@ public class DemoJavaConfigAction {
         System.out.println("SUCESS: registered user with id " + anotherUserRestService.registerUser(user).getId());
 
         System.out.println("SUCESS: got user " + anotherUserRestService.getUser(1L));
+
+        System.out.println(demoService.sayHello("liuyan"));
     }
 }

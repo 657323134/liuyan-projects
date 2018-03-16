@@ -19,6 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.alibaba.dubbo.demo.bid.*;
+import com.alibaba.dubbo.demo.service.DemoService;
 import com.alibaba.dubbo.demo.user.User;
 import com.alibaba.dubbo.demo.user.facade.AnotherUserRestService;
 import com.alibaba.dubbo.rpc.RpcContext;
@@ -28,6 +29,7 @@ public class DemoAction {
     private BidService bidService;
 
     private AnotherUserRestService anotherUserRestService;
+    private DemoService demoService;
 
     public void setBidService(BidService bidService) {
         this.bidService = bidService;
@@ -35,6 +37,10 @@ public class DemoAction {
 
     public void setAnotherUserRestService(AnotherUserRestService anotherUserRestService) {
         this.anotherUserRestService = anotherUserRestService;
+    }
+
+    public void setDemoService(DemoService demoService) {
+        this.demoService = demoService;
     }
 
     public void start() throws Exception {
@@ -84,6 +90,9 @@ public class DemoAction {
         RpcContext.getContext().setAttachment("clientName", "demo");
         RpcContext.getContext().setAttachment("clientImpl", "dubbox");
         System.out.println("SUCCESS: got user " + anotherUserRestService.getUser(1L));
+
+        System.out.println("------------------------");
+        System.out.println(demoService.sayHello("liuyan"));
     }
 
 }

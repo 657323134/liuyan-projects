@@ -20,8 +20,10 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
 	http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
+    <!--提供方应用信息，用于计算依赖关系-->
     <dubbo:application name="demo-provider" owner="programmer" organization="dubbox"/>
 
+    <!--使用zookeeper注册中心暴露服务地址-->
     <dubbo:registry address="zookeeper://127.0.0.1:2181"/>
 
     <!--uncomment this if you want to test dubbo's monitor-->
@@ -30,6 +32,7 @@
     <!-- here we demonstrate both annotation-based and xml-based configs -->
     <dubbo:annotation package="com.alibaba.dubbo.demo.user.facade" />
 
+    <!--用dubbo协议暴露服务，使用序列化方式为kryo（速度最快的方式）-->
     <dubbo:protocol name="dubbo" serialization="kryo" optimizer="com.alibaba.dubbo.demo.SerializationOptimizerImpl"/>
     <!--<dubbo:protocol name="dubbo" serialization="fst" optimizer="com.alibaba.dubbo.demo.SerializationOptimizerImpl"/>-->
 
@@ -62,6 +65,7 @@
     <dubbo:protocol name="hessian" port="8890"/>
     <dubbo:protocol name="webservice" port="8892"/>
 
+    <!--声明需要暴露的服务接口-->
 	<dubbo:service interface="com.alibaba.dubbo.demo.bid.BidService" ref="bidService"  protocol="dubbo"/>
 
     <!-- we add the group property since there's another annotation-configured service impl: com.alibaba.dubbo.demo.user.facade.AnnotationDrivenUserRestServiceImpl -->
@@ -70,6 +74,11 @@
 	<dubbo:service interface="com.alibaba.dubbo.demo.user.facade.UserRestService" ref="userRestService"  protocol="rest" validation="true"/>
 	<dubbo:service interface="com.alibaba.dubbo.demo.user.facade.AnotherUserRestService" ref="anotherUserRestService"  protocol="rest"  timeout="2000" connections="100" validation="true"/>
 
+    <!--指定dubbo协议，不然会报错 class is a not root resource-->
+    <dubbo:service interface="com.alibaba.dubbo.demo.service.DemoService" ref="demoService" protocol="dubbo"/>
+
+
+    <bean id="demoService" class="com.alibaba.dubbo.demo.service.DemoServiceImpl"/>
     <bean id="bidService" class="com.alibaba.dubbo.demo.bid.BidServiceImpl" />
 
     <bean id="userService" class="com.alibaba.dubbo.demo.user.UserServiceImpl" />
