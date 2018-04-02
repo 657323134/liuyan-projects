@@ -11,7 +11,7 @@ public class Test2 {
         GenericMemoryCell<Integer> list = new GenericMemoryCell<>();
         list.write(1);
         Object object = list;
-        GenericMemoryCell<String> list2 = (GenericMemoryCell<String>)list;
+//        GenericMemoryCell<String> list2 = (GenericMemoryCell<String>)list;
     }
 }
 class GenericMemoryCell<T> {
