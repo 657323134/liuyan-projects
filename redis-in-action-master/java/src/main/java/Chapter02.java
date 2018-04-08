@@ -20,9 +20,9 @@ public class Chapter02 {
         conn.select(15);
 
         testLoginCookies(conn);
-        testShopppingCartCookies(conn);
-        testCacheRows(conn);
-        testCacheRequest(conn);
+//        testShopppingCartCookies(conn);
+//        testCacheRows(conn);
+//        testCacheRequest(conn);
     }
 
     public void testLoginCookies(Jedis conn)
